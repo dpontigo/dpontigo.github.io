@@ -650,3 +650,21 @@ section[id] { scroll-margin-top:130px; }
 .anx-teaser:hover .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 .anx-teaser:hover .leer::after { transform:translateX(4px); }
 @media (max-width:560px) { .anx-teaser { grid-template-columns:1fr; gap:18px; padding:18px; } .tz-txt p { font-size:17px; } }
+
+/* ===== Anexionistas: tarjeta con perfil, "Leer más" y botón activo ===== */
+.anx div.anx-perfil p { margin:0; }
+.anx-perfil a { color:var(--cyan); border-bottom:1px solid rgba(127,212,255,.4); word-break:break-word; }
+.anx-perfil a:hover { color:#fff; border-bottom-color:#fff; }
+.anx-mas { margin-top:8px; }
+.anx-mas summary { display:inline-flex; align-items:center; gap:6px; cursor:pointer; list-style:none; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cyan); padding:4px 0; }
+.anx-mas summary::-webkit-details-marker { display:none; }
+.anx-mas summary::after { content:""; width:5px; height:5px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:translateY(-2px) rotate(45deg); transition:transform .2s; }
+.anx-mas[open] summary::after { transform:translateY(1px) rotate(-135deg); }
+.anx-mas summary:hover { color:#fff; }
+.anx-mas summary:focus-visible { outline:2px solid var(--cyan); outline-offset:2px; }
+.anx-mas .menos, .anx-mas[open] .mas { display:none; }
+.anx-mas[open] .menos { display:inline; }
+.anx-mas p { margin:8px 0 0; }
+.anx-perfil:has(.anx-mas[open]) .anx-corta { display:none; }
+.anx a.leer:hover, .anx a.leer:focus-visible { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); outline:none; }
+.anx a.leer:hover::after { transform:translateX(4px); }
