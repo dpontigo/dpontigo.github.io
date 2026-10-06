@@ -674,17 +674,6 @@ section[id] { scroll-margin-top:130px; }
 .preso-texto ul.datos-lista li strong { color:#fff; font-weight:600; margin-right:4px; }
 @media (max-width:600px) { .preso-texto h2 { font-size:15px; letter-spacing:.14em; } }
 /* ===== Slide 01 ANEXIÓN: tarjetas apiladas (Art. 1 + Art. 2), estrella 51 como insignia fuera de la foto, fondo con tono bandera ===== */
-.vis-anexion .vframe { top:auto; bottom:auto; margin:0; border-radius:6px; }
-.vis-anexion .vframe img { aspect-ratio:16/10; object-fit:cover; }
-.vis-anexion .vf-front { right:112px; bottom:12px; width:min(76%,390px); z-index:2; transform:rotate(-1.5deg); border-color:rgba(127,212,255,.9);
-  box-shadow:0 0 0 5px rgba(5,6,15,.7), 0 0 30px rgba(127,212,255,.4), 0 28px 60px rgba(0,0,0,.7); }
-.vis-anexion .vf-back { right:0; top:0; width:min(58%,300px); z-index:1; transform:rotate(3deg); border-color:rgba(255,45,75,.8);
-  box-shadow:0 0 0 5px rgba(5,6,15,.7), 0 0 26px rgba(255,45,75,.35), 0 20px 44px rgba(0,0,0,.6); }
-.vis-anexion .vf-back img { filter:brightness(.82) saturate(.95); }
-.vis-anexion .vframe figcaption { left:10px; top:10px; }
-.vis-anexion .vf-back figcaption { left:auto; right:10px; border-color:var(--red); }
-.vis-anexion .vstar { right:4px; bottom:34px; width:84px; }
-.vis-anexion .vstar span { font-size:20px; }
 .hero-home .hero-bg .bg-anexion { background-image:linear-gradient(115deg, #1a3fb8 0%, #2f6bff 52%, #e0294d 100%), url(../img/hero-anexion.jpg); background-size:cover; background-position:center, center 62%;
   background-blend-mode:color; filter:contrast(1.2) brightness(1.05); }
 .hero-home .hero-bg .bg-anexion::after { content:""; position:absolute; inset:0; opacity:.45;
@@ -693,12 +682,6 @@ section[id] { scroll-margin-top:130px; }
 .hero-home .hero-bg:has(.bg-anexion.on)::after { background:
   linear-gradient(90deg, rgba(5,6,15,.92) 0%, rgba(5,6,15,.72) 36%, rgba(5,6,15,.28) 68%, rgba(5,6,15,.38) 100%),
   linear-gradient(180deg, rgba(5,6,15,.3) 0%, transparent 28%, transparent 70%, rgba(5,6,15,.92) 100%); }
-@media (max-width:900px) {
-  .vis-anexion .vf-front { right:64px; width:min(78%,240px); }
-  .vis-anexion .vf-back { width:min(66%,200px); top:44px; }
-  .vis-anexion .vstar { right:0; bottom:28px; width:58px; }
-  .vis-anexion .vstar span { font-size:14px; }
-}
 @media (max-width:700px) {
   .hero-home .hero-bg .bg-anexion { background-image:linear-gradient(160deg, #2f6bff 0%, #1a3fb8 55%, #e0294d 100%), url(../img/articulo-1.jpg); background-position:center; filter:contrast(1.1); }
   .hero-home .hero-bg .bg-anexion::after { content:none; }
@@ -729,3 +712,35 @@ section[id] { scroll-margin-top:130px; }
 .articulo .art-foto.art-cap figcaption { padding:9px 12px; font-size:14px; line-height:1.45; color:var(--muted); background:rgba(5,6,15,.6); border-top:1px solid var(--line); }
 .art-cap figcaption .cred { margin-left:6px; font-size:11.5px; letter-spacing:.04em; color:rgba(154,166,200,.75); text-decoration:underline; text-underline-offset:2px; white-space:nowrap; }
 .art-cap figcaption .cred:hover { color:var(--cyan); }
+
+/* ===== Slide 01 ANEXIÓN v2: tres tarjetas en cascada (cada una enlaza a su artículo, con título visible) ===== */
+.vis-anexion .vframe { display:block; position:absolute; margin:0; width:min(58%,300px); border-radius:6px; overflow:hidden; color:#fff;
+  border:1px solid rgba(127,212,255,.75); box-shadow:0 0 0 4px rgba(5,6,15,.7), 0 0 22px rgba(127,212,255,.3), 0 22px 46px rgba(0,0,0,.65);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.vis-anexion .vframe img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; filter:contrast(1.05); }
+.vis-anexion .va-1 { right:0; top:0; z-index:3; transform:rotate(1deg); }
+.vis-anexion .va-2 { left:21%; top:66px; z-index:2; transform:rotate(-1.5deg); border-color:rgba(255,45,75,.8); }
+.vis-anexion .va-3 { left:0; top:132px; z-index:1; transform:rotate(-3deg); border-color:rgba(255,255,255,.6); }
+.vis-anexion .va-2 img, .vis-anexion .va-3 img { filter:contrast(1.05) brightness(.88); }
+.vis-anexion .vframe:hover, .vis-anexion .vframe:focus-visible { z-index:4; transform:translateY(-6px) rotate(0deg); border-color:var(--cyan); outline:none;
+  box-shadow:0 0 0 4px rgba(5,6,15,.7), 0 0 30px rgba(127,212,255,.65), 0 26px 50px rgba(0,0,0,.7); }
+.vis-anexion .vcap { position:absolute; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:24px 12px 9px;
+  background:linear-gradient(180deg, transparent 0%, rgba(5,6,15,.74) 34%, rgba(5,6,15,.95) 100%); }
+.vis-anexion .vlab { font-family:"Orbitron",sans-serif; font-size:8.5px; letter-spacing:.24em; line-height:1; color:#fff; background:rgba(5,6,15,.6); border:1px solid var(--cyan); padding:3px 6px; }
+.vis-anexion .va-2 .vlab { border-color:var(--red); }
+.vis-anexion .va-3 .vlab { border-color:#fff; }
+.vis-anexion .vtit { font-family:"Rajdhani",sans-serif; font-weight:600; font-size:15px; line-height:1.2; letter-spacing:.01em; color:#fff; text-shadow:0 1px 6px rgba(0,0,0,.9);
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.vis-anexion .vstar { right:10px; bottom:14px; width:80px; }
+.vis-anexion .vstar span { font-size:19px; }
+@media (max-width:900px) {
+  .vis-anexion .vframe { width:min(64%,200px); }
+  .vis-anexion .va-2 { left:18%; top:70px; }
+  .vis-anexion .va-3 { top:140px; }
+  .vis-anexion .vcap { padding:16px 8px 6px; gap:3px; }
+  .vis-anexion .vtit { font-size:12.5px; }
+  .vis-anexion .vlab { font-size:7px; padding:2px 4px; }
+  .vis-anexion .vstar { right:0; bottom:22px; width:56px; }
+  .vis-anexion .vstar span { font-size:13px; }
+}
+@media (prefers-reduced-motion:reduce) { .vis-anexion .vframe { transition:none; } }
