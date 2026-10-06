@@ -401,3 +401,43 @@ a.dossier { display:flex; }
 a.anx:hover .leer, a.anx:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 a.anx:hover .leer::after { transform:translateX(4px); }
 a.anx:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+
+/* ===== Presos Políticos: ficha con foto y enlace a su página ===== */
+a.dossier.preso-link { display:flex; flex-direction:column; color:inherit; text-decoration:none; }
+a.preso-link:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+.foto-wrap { position:relative; }
+.dossier .foto-wrap .sello { right:-4px; bottom:-2px; }
+.dossier .foto img { object-position:center 22%; }
+.dossier .foto:has(img)::before, .dossier .foto:has(img)::after { display:none; }
+.preso-link .leer { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:16px; padding:7px 11px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#fff; border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
+.preso-link .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+a.preso-link:hover .leer, a.preso-link:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
+a.preso-link:hover .leer::after { transform:translateX(4px); }
+/* página de un preso */
+.preso-top { display:grid; grid-template-columns:300px 1fr; gap:26px; align-items:start; margin-bottom:28px; }
+.preso-top .art-foto { position:relative; margin:0; overflow:visible; }
+.preso-top .art-foto img { border-radius:4px; }
+.preso-top .art-foto figcaption { position:absolute; left:0; right:0; top:calc(100% + 8px); font-size:13px; color:var(--muted); line-height:1.4; }
+.preso-top .art-foto figcaption a { color:var(--cyan); border-bottom:1px solid rgba(127,212,255,.35); }
+.preso-datos { margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 14px; align-items:baseline; padding:18px; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--red); border-radius:4px; }
+.preso-datos dt { font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.2em; color:var(--cyan); }
+.preso-datos dd { margin:0; font-family:"Courier New", ui-monospace, monospace; font-size:16px; color:#fff; border-bottom:1px dotted rgba(255,255,255,.25); padding-bottom:3px; }
+.preso-texto { margin-top:52px; }
+.preso-texto p { margin:0 0 16px; font-size:19px; line-height:1.7; color:var(--ink); }
+.preso-texto ul { margin:0 0 18px; padding:0; list-style:none; display:grid; gap:10px; }
+.preso-texto li { position:relative; padding:12px 16px 12px 40px; font-size:18px; line-height:1.6; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--red); border-radius:4px; }
+.preso-texto li:nth-child(even) { border-left-color:var(--blue); }
+.preso-texto li::before { content:"★"; position:absolute; left:14px; top:12px; color:var(--cyan); text-shadow:0 0 8px rgba(127,212,255,.6); }
+.fuentes { margin:28px 0 0; padding-top:16px; border-top:1px solid var(--line); font-size:15px; color:var(--muted); }
+.fuentes h2 { margin:0 0 10px; font-size:13px; letter-spacing:.22em; }
+.fuentes ul { margin:0; padding-left:18px; display:grid; gap:6px; }
+.fuentes a { color:var(--cyan); border-bottom:1px solid rgba(127,212,255,.4); }
+.fuentes a:hover { color:#fff; border-bottom-color:#fff; }
+@media (max-width:700px) {
+  .preso-top { grid-template-columns:1fr; }
+  .preso-top .art-foto { max-width:340px; width:100%; margin:0 auto; }
+  .preso-top .art-foto figcaption { position:static; margin:0; padding:7px 10px; }
+  .preso-texto { margin-top:8px; }
+  .preso-texto p { font-size:17px; }
+  .preso-texto li { font-size:16px; }
+}

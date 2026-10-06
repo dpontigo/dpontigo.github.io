@@ -28,3 +28,10 @@ de imágenes CC BY-SA se comparten bajo la misma licencia CC BY-SA.
 
 Las siluetas de los expedientes de Presos Políticos son dibujos genéricos hechos
 con CSS; no representan a ninguna persona real.
+
+4) img/presos/felix-navarro.jpg  (Presos Políticos: Félix Navarro Rodríguez)
+   Título:   Félix Navarro Rodríguez.jpg
+   Autor:    Hvd69
+   Licencia: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0
+   Fuente:   https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Navarro_Rodr%C3%ADguez.jpg
+   Nota:     Recorte vertical 3:4 (900x1200) y recompresión JPG.
