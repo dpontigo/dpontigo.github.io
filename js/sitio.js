@@ -14,9 +14,15 @@
     vm.setAttribute('aria-label', 'Video');
     vm.setAttribute('aria-hidden', 'true');
     vm.innerHTML = '<button class="vmodal-close" type="button" aria-label="Cerrar video">✕</button>' +
-      '<video controls playsinline preload="none" controlslist="nodownload"></video>';
+      '<video controls playsinline preload="none" controlslist="nodownload"></video>' +
+      '<button class="vmodal-play" type="button" aria-label="Reproducir">\u25B6\uFE0E</button>';
     document.body.appendChild(vm);
-    var vv = vm.querySelector('video'), vx = vm.querySelector('.vmodal-close'), vlast = null;
+    var vv = vm.querySelector('video'), vx = vm.querySelector('.vmodal-close'), vlast = null,
+        vpb = vm.querySelector('.vmodal-play');
+    // Botón grande de play: se ve cuando el video está en pausa (por si el teléfono no lo deja arrancar solo)
+    var vsync = function () { vm.classList.toggle('paused', vv.paused); };
+    vv.addEventListener('play', vsync); vv.addEventListener('playing', vsync); vv.addEventListener('pause', vsync); vv.addEventListener('ended', vsync);
+    vpb.addEventListener('click', function (e) { e.stopPropagation(); var p = vv.play(); if (p && p.catch) p.catch(function () {}); });
 
     var vopen = function (card) {
       var src = card.getAttribute('data-video');
@@ -30,8 +36,9 @@
       vm.setAttribute('aria-hidden', 'false');
       document.documentElement.style.overflow = 'hidden';
       // play() dentro del mismo clic: el navegador permite que empiece solo y con sonido
+      vm.classList.add('paused');
       var p = vv.play();
-      if (p && p.catch) p.catch(function () {});
+      if (p && p.catch) p.catch(function () { vsync(); });
       vx.focus({ preventScroll: true });
     };
     var vclose = function () {

@@ -332,3 +332,6 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
   box-shadow:0 0 14px rgba(255,45,75,.6), inset 0 0 10px rgba(255,45,75,.25); transition:.2s; }
 .vmodal-close:hover, .vmodal-close:focus-visible { background:var(--red); box-shadow:0 0 22px rgba(255,45,75,.9); outline:none; }
 @media (max-width:600px) { .vmodal { padding:12px; } .vmodal video { height:min(calc(100dvh - 80px), calc((100vw - 24px) * 16 / 9)); } .vmodal-close { top:10px; right:10px; } }
+.vmodal-play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2; width:88px; height:88px; border-radius:50%; border:2px solid var(--cyan); background:rgba(5,6,15,.6); color:#fff; font-size:34px; line-height:1; padding-left:6px; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 0 24px rgba(47,123,255,.7), 0 0 40px rgba(255,45,75,.4); }
+.vmodal.paused .vmodal-play { display:flex; }
+.vmodal-play:hover { background:var(--red); }
