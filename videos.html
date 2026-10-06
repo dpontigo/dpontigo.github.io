@@ -41,21 +41,22 @@
       <h2>Galería</h2>
       <!--
         CÓMO PONER UN VIDEO PROPIO (archivo alojado en la web):
-        1. Sube el archivo a la carpeta videos/  (por ejemplo videos/video-1.mp4; MP4 H.264 funciona en todos los navegadores).
-        2. Opcional: sube una imagen de portada a img/  (por ejemplo img/poster-video-1.jpg).
-        3. En la tarjeta, sustituye toda la línea <div class="frame">...</div> por:
+        1. Sube el video a la carpeta videos/  (por ejemplo videos/video-2.mp4; MP4 H.264 funciona en todos los navegadores).
+        2. Sube una imagen de portada a la misma carpeta (por ejemplo videos/video-2.jpg).
+        3. Sustituye la tarjeta <div class="vcard"> ... </div> por (igual que la del Video 1):
 
-           <video controls preload="metadata" playsinline poster="img/poster-video-1.jpg">
-             <source src="videos/video-1.mp4" type="video/mp4">
-             Tu navegador no puede reproducir este video.
-           </video>
+           <div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Video 2">
+             <div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy"><span class="play">▶</span><span class="dur">0:00</span></div>
+             <strong>Video 2</strong><span class="meta">Título y fecha</span>
+           </div>
 
-        4. Cambia "Video 1" por el título y la línea [Pendiente] por la fecha o descripción.
-        (Nota: GitHub limita cada archivo a 100 MB; mejor videos comprimidos de pocos MB.)
+           Al pulsar la tarjeta, el video se abre en grande y empieza a sonar solo (js/sitio.js).
+        4. Pon la duración real en <span class="dur"> y el título/fecha en la línea meta.
+        (Nota: GitHub limita cada archivo a 100 MB; comprime los videos a unos 20-40 MB.)
       -->
       <div class="vgrid">
-        <div class="vcard">
-          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+        <div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir Video 1">
+          <div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶</span><span class="dur">3:17</span></div>
           <strong>Video 1</strong><span class="meta">Título y fecha: [Pendiente]</span>
         </div>
         <div class="vcard">

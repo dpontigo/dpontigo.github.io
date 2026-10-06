@@ -4,6 +4,61 @@
   var t = document.getElementById('vtrack');
   if (t) t.innerHTML += t.innerHTML;
 
+  // Visor de video: cualquier tarjeta con data-video="videos/...mp4" lo abre en grande y lo reproduce.
+  // Delegación de eventos: las tarjetas de la marquesina están duplicadas con innerHTML.
+  if (document.querySelector('[data-video]')) {
+    var vm = document.createElement('div');
+    vm.className = 'vmodal';
+    vm.setAttribute('role', 'dialog');
+    vm.setAttribute('aria-modal', 'true');
+    vm.setAttribute('aria-label', 'Video');
+    vm.setAttribute('aria-hidden', 'true');
+    vm.innerHTML = '<button class="vmodal-close" type="button" aria-label="Cerrar video">✕</button>' +
+      '<video controls playsinline preload="none" controlslist="nodownload"></video>';
+    document.body.appendChild(vm);
+    var vv = vm.querySelector('video'), vx = vm.querySelector('.vmodal-close'), vlast = null;
+
+    var vopen = function (card) {
+      var src = card.getAttribute('data-video');
+      vlast = card;
+      if (vv.getAttribute('src') !== src) {
+        vv.setAttribute('src', src);
+        vv.setAttribute('poster', card.getAttribute('data-poster') || '');
+      }
+      try { vv.currentTime = 0; } catch (e) {}
+      vm.classList.add('open');
+      vm.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+      // play() dentro del mismo clic: el navegador permite que empiece solo y con sonido
+      var p = vv.play();
+      if (p && p.catch) p.catch(function () {});
+      vx.focus({ preventScroll: true });
+    };
+    var vclose = function () {
+      if (!vm.classList.contains('open')) return;
+      vv.pause();
+      try { vv.currentTime = 0; } catch (e) {}
+      vm.classList.remove('open');
+      vm.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = '';
+      if (vlast) vlast.focus({ preventScroll: true });
+    };
+
+    document.addEventListener('click', function (e) {
+      var card = e.target.closest && e.target.closest('[data-video]');
+      if (card) { e.preventDefault(); vopen(card); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { vclose(); return; }
+      if ((e.key === 'Enter' || e.key === ' ') && !vm.classList.contains('open')) {
+        var card = e.target.closest && e.target.closest('[data-video]');
+        if (card) { e.preventDefault(); vopen(card); }
+      }
+    });
+    vx.addEventListener('click', vclose);
+    vm.addEventListener('click', function (e) { if (e.target === vm) vclose(); });
+  }
+
   // Slider de la portada (diapositivas + fondos + puntos)
   var sl = [].slice.call(document.querySelectorAll('.slide')),
       dt = [].slice.call(document.querySelectorAll('.dots button')),
