@@ -64,10 +64,22 @@
   footer .inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
   footer .stars { color:var(--red); text-shadow:0 0 8px var(--red); letter-spacing:.4em; }
   @media (max-width:600px) { h1 { font-size:27px; } .hero-inner { padding:56px 16px 60px; } .hero-card { padding:22px; } }
+  .bar { background:linear-gradient(90deg, #002a8f, var(--red) 30%, #fff 50%, var(--red) 70%, var(--blue)); color:#05060f; font-weight:800; text-shadow:none; }
+  .cuba { position:absolute; right:0; top:0; height:100%; width:min(46%,520px); opacity:.55;
+    background: repeating-linear-gradient(180deg, rgba(0,42,143,.85) 0 20%, rgba(255,255,255,.08) 20% 40%);
+    mask-image: linear-gradient(270deg, #000 30%, transparent); -webkit-mask-image: linear-gradient(270deg, #000 30%, transparent); }
+  .cuba::before { content:""; position:absolute; right:0; top:0; height:100%; width:62%; background:rgba(255,45,75,.75); clip-path: polygon(100% 0, 0 50%, 100% 100%); filter: drop-shadow(0 0 18px var(--red)); }
+  .star51 { position:absolute; right:clamp(30px,10%,140px); top:50%; transform:translateY(-50%); font-size:clamp(90px,14vw,170px); line-height:1; color:#fff;
+    text-shadow:0 0 20px #fff, 0 0 45px var(--cyan), 0 0 80px var(--blue); animation: pulse 2.6s ease-in-out infinite; }
+  .star51 span { position:absolute; left:50%; top:54%; transform:translate(-50%,-50%); font-family:"Orbitron",sans-serif; font-size:clamp(18px,2.6vw,30px); font-weight:800; color:#05060f; text-shadow:none; }
+  @keyframes pulse { 0%,100% { transform:translateY(-50%) scale(1); } 50% { transform:translateY(-50%) scale(1.08); } }
+  .hero-card::before { content:"// ESTRELLA 51 · USA + CUBA"; }
+  .tag { display:inline-block; margin-top:16px; font-family:"Orbitron",sans-serif; font-size:11px; letter-spacing:.25em; padding:8px 12px; border:1px solid var(--cyan); color:#fff; box-shadow:0 0 12px rgba(127,212,255,.4); }
+  @media (max-width:700px) { .star51 { opacity:.35; } }
 </style>
 </head>
 <body>
-  <div class="bar"><span>★ Una página, varios temas ★</span></div>
+  <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
   <header>
     <div class="top"><div class="logo">DIDIER <span class="stars">★★★</span></div></div>
     <nav>
@@ -80,11 +92,12 @@
     </nav>
   </header>
   <div class="hero" id="inicio">
-    <div class="stripes"></div><div class="field"></div><div class="scan"></div>
+    <div class="stripes"></div><div class="field"></div><div class="scan"></div><div class="cuba"></div><div class="star51">★<span>51</span></div>
     <div class="hero-inner">
       <div class="hero-card">
-        <h1>Lo que escribo, manejo y canto.</h1>
-        <p>Artículos, fotos, videos, fletes y canciones, todo en un solo lugar.</p>
+        <h1>Cuba, la estrella 51.</h1>
+        <p>Un futuro de libertad bajo las barras y las estrellas. Artículos, fotos, videos, fletes y canciones.</p>
+        <div class="tag">USA ★ CUBA · FUTURO LIBRE</div>
       </div>
     </div>
   </div>
