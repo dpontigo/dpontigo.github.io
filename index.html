@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791273922">
+<link rel="stylesheet" href="css/estilo.css?v=1791274429">
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -26,19 +26,39 @@
       <a href="canciones.html">Canciones</a>
     </nav>
   </header>
-  <div class="hero" id="inicio">
+  <div class="hero hero-home" id="inicio">
     <div class="hero-bg" aria-hidden="true"><div class="bg bg-anexion on"></div><div class="bg bg-presos"></div><div class="bg bg-videos"></div><div class="bg bg-represores"></div><div class="bg bg-canciones"></div></div>
-    <div class="stripes"></div><div class="field"></div><div class="scan"></div><div class="cuba"></div><div class="star3d"><div class="glow"></div><div class="spin"><div class="ly" style="transform:translateZ(-6px)"></div><div class="ly" style="transform:translateZ(-4px)"></div><div class="ly" style="transform:translateZ(-2px)"></div><div class="ly" style="transform:translateZ(0px)"></div><div class="ly" style="transform:translateZ(2px)"></div><div class="ly" style="transform:translateZ(4px)"></div><div class="ly" style="transform:translateZ(6px)"></div><div class="ly face" style="transform:translateZ(8px)"><span>51</span></div><div class="ly face" style="transform:rotateY(180deg) translateZ(8px)"><span>51</span></div></div></div>
+    <div class="stripes"></div><div class="field"></div><div class="scan"></div>
     <div class="hero-inner">
-      <div class="hero-card">
-        <div class="slides">
-          <div class="slide on"><h1>ANEXIÓN</h1><p>Cuba, la estrella 51. Un futuro de libertad bajo las barras y las estrellas.</p><a class="btn" href="anexion.html">VER ARTÍCULOS</a></div>
-          <div class="slide"><h1>PRESOS POLÍTICOS</h1><p>Sus nombres y sus rostros. Que nadie los olvide.</p><a class="btn" href="presos-politicos.html">VER FOTOS</a></div>
-          <div class="slide"><h1>VIDEOS</h1><p>Lo que está pasando, en imágenes.</p><a class="btn" href="videos.html">VER VIDEOS</a></div>
-          <div class="slide"><h1>REPRESORES</h1><p>Sus rostros y sus crímenes. Que no queden impunes.</p><a class="btn" href="represores.html">VER REPRESORES</a></div>
-          <div class="slide"><h1>CANCIONES</h1><p>La música que no se calla.</p><a class="btn" href="canciones.html">VER CANCIONES</a></div>
+      <div class="slides" role="region" aria-roledescription="carrusel" aria-label="Secciones destacadas">
+        <div class="slide on" aria-roledescription="diapositiva" aria-label="1 de 5">
+          <div class="slide-txt"><span class="kicker">01 / 05</span><h1>ANEXIÓN</h1><p>Cuba, la estrella 51. Un futuro de libertad bajo las barras y las estrellas.</p><a class="btn" href="anexion.html">VER ARTÍCULOS</a></div>
+          <div class="slide-vis vis-anexion" aria-hidden="true"><figure class="vframe"><img src="img/articulo-1.jpg" alt="" width="745" height="466"><figcaption>ARTÍCULO 1</figcaption></figure><div class="vstar"><span>51</span></div></div>
         </div>
-        <div class="dots"><button class="on" aria-label="Anexión"></button><button aria-label="Presos políticos"></button><button aria-label="Videos"></button><button aria-label="Represores"></button><button aria-label="Canciones"></button></div>
+        <div class="slide" aria-roledescription="diapositiva" aria-label="2 de 5">
+          <div class="slide-txt"><span class="kicker">02 / 05</span><h1>PRESOS POLÍTICOS</h1><p>Sus nombres y sus rostros. Que nadie los olvide.</p><a class="btn" href="presos-politicos.html">VER FOTOS</a></div>
+          <div class="slide-vis vis-presos" aria-hidden="true">
+            <div class="vficha back b2"><div class="vf-ph"></div></div><div class="vficha back b1"><div class="vf-ph"></div></div>
+            <div class="vficha"><div class="vf-head"><span>EXPEDIENTE</span><b>EXP-001</b></div><div class="vf-ph"><img src="img/presos/felix-navarro.jpg" alt="" width="900" height="1200" loading="lazy"></div><div class="vf-name">Félix Navarro Rodríguez</div><div class="sello">CUBA<br>LIBRE51</div></div>
+          </div>
+        </div>
+        <div class="slide" aria-roledescription="diapositiva" aria-label="3 de 5">
+          <div class="slide-txt"><span class="kicker">03 / 05</span><h1>VIDEOS</h1><p>Lo que está pasando, en imágenes.</p><a class="btn" href="videos.html">VER VIDEOS</a></div>
+          <div class="slide-vis vis-videos" aria-hidden="true"><div class="vphone p1"><img src="videos/video-1.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p3"><img src="videos/video-2.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p2"><img src="videos/video-4.jpg" alt="" width="720" height="1280" loading="lazy"><span class="vplay">▶&#xFE0E;</span></div></div>
+        </div>
+        <div class="slide" aria-roledescription="diapositiva" aria-label="4 de 5">
+          <div class="slide-txt"><span class="kicker">04 / 05</span><h1>REPRESORES</h1><p>Sus rostros y sus crímenes. Que no queden impunes.</p><a class="btn" href="represores.html">VER REPRESORES</a></div>
+          <div class="slide-vis vis-represores" aria-hidden="true"><div class="vficha rep back b1"><div class="vf-ph"></div></div><div class="vficha rep"><div class="vf-head"><span>PERFIL</span><b>REP-001</b></div><div class="vf-ph"></div><div class="vf-name">[Pendiente]</div></div><div class="vtarget"></div></div>
+        </div>
+        <div class="slide" aria-roledescription="diapositiva" aria-label="5 de 5">
+          <div class="slide-txt"><span class="kicker">05 / 05</span><h1>CANCIONES</h1><p>La música que no se calla.</p><a class="btn" href="canciones.html">VER CANCIONES</a></div>
+          <div class="slide-vis vis-canciones" aria-hidden="true"><div class="vlist"><div class="vl-head"><span>TEMAS</span><span class="eq"><i></i><i></i><i></i><i></i><i></i></span></div><ol><li>Los Estamos Olvidando</li><li>El Carcelero de Sueños</li><li>La Miel Ajena</li><li>La Falsa Nostalgia</li></ol></div></div>
+        </div>
+      </div>
+      <div class="hero-ctrl">
+        <button class="hnav hprev" type="button" aria-label="Anterior">‹</button>
+        <div class="dots"><button class="on" type="button" aria-label="Anexión"><i></i></button><button type="button" aria-label="Presos políticos"><i></i></button><button type="button" aria-label="Videos"><i></i></button><button type="button" aria-label="Represores"><i></i></button><button type="button" aria-label="Canciones"><i></i></button></div>
+        <button class="hnav hnext" type="button" aria-label="Siguiente">›</button>
       </div>
     </div>
   </div>
@@ -116,6 +136,6 @@
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791273922"></script>
+<script src="js/sitio.js?v=1791274429"></script>
 </body>
 </html>
