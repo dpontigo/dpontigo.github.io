@@ -380,3 +380,9 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
   .rnum { font-size:22px; }
   .rtxt p { font-size:17px; }
 }
+
+/* ===== Portada: bloque de Canciones en 2x2 (1 columna en móvil) ===== */
+.split-temas { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.split-temas .block { display:flex; flex-direction:column; }
+.split-temas .block p { flex:1; }
+@media (max-width:640px) { .split-temas { grid-template-columns:1fr; } }
