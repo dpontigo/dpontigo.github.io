@@ -168,6 +168,17 @@
   .credits { flex-basis:100%; font-family:"Rajdhani",sans-serif; font-size:12px; letter-spacing:.05em; color:rgba(154,166,200,.7); }
   .credits a { text-decoration:underline; text-underline-offset:2px; }
   .credits a:hover { color:var(--cyan); }
+  .star3d { position:absolute; right:clamp(20px,9%,130px); top:50%; width:clamp(130px,16vw,200px); aspect-ratio:1; transform:translateY(-50%); perspective:900px; z-index:1; }
+  .star3d .spin { position:absolute; inset:0; transform-style:preserve-3d; animation: spin3d 14s linear infinite; }
+  .star3d .ly { position:absolute; inset:0; clip-path: polygon(50% 0%, 61.8% 35.1%, 98.1% 35.1%, 68.8% 56.7%, 79.4% 91%, 50% 70%, 20.6% 91%, 31.2% 56.7%, 1.9% 35.1%, 38.2% 35.1%);
+    background:linear-gradient(135deg, #9fb8e8, #4a5f9a); }
+  .star3d .face { background:radial-gradient(circle at 35% 30%, #ffffff, #dfe9ff 55%, #a9c3ff); display:flex; align-items:center; justify-content:center; }
+  .star3d .face span { font-family:"Orbitron",sans-serif; font-weight:800; font-size:clamp(22px,2.8vw,34px); color:#05060f; margin-top:12%; }
+  .star3d .glow { position:absolute; inset:-25%; border-radius:50%; background:radial-gradient(circle, rgba(127,212,255,.45), rgba(47,123,255,.15) 45%, transparent 70%); animation: glowp 3s ease-in-out infinite; }
+  @keyframes spin3d { from { transform:rotateY(0deg) rotateX(8deg); } to { transform:rotateY(360deg) rotateX(8deg); } }
+  @keyframes glowp { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) { .star3d .spin { animation-duration:40s; } }
+  @media (max-width:700px) { .star3d { opacity:.4; } }
 </style>
 </head>
 <body>
@@ -186,7 +197,7 @@
   </header>
   <div class="hero" id="inicio">
     <div class="hero-bg" aria-hidden="true"><div class="bg bg-anexion on"></div><div class="bg bg-presos"></div><div class="bg bg-videos"></div></div>
-    <div class="stripes"></div><div class="field"></div><div class="scan"></div><div class="cuba"></div><div class="star51">★<span>51</span></div>
+    <div class="stripes"></div><div class="field"></div><div class="scan"></div><div class="cuba"></div><div class="star3d"><div class="glow"></div><div class="spin"><div class="ly" style="transform:translateZ(-6px)"></div><div class="ly" style="transform:translateZ(-4px)"></div><div class="ly" style="transform:translateZ(-2px)"></div><div class="ly" style="transform:translateZ(0px)"></div><div class="ly" style="transform:translateZ(2px)"></div><div class="ly" style="transform:translateZ(4px)"></div><div class="ly" style="transform:translateZ(6px)"></div><div class="ly face" style="transform:translateZ(8px)"><span>51</span></div><div class="ly face" style="transform:rotateY(180deg) translateZ(8px)"><span>51</span></div></div></div>
     <div class="hero-inner">
       <div class="hero-card">
         <div class="slides">
