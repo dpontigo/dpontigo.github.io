@@ -165,15 +165,15 @@ header.open .menu-btn span:nth-child(3) { top:19px; transform:rotate(-45deg); }
 .credits a { text-decoration:underline; text-underline-offset:2px; }
 .credits a:hover { color:var(--cyan); }
 .star3d { position:absolute; right:clamp(20px,9%,130px); top:50%; width:clamp(130px,16vw,200px); aspect-ratio:1; transform:translateY(-50%); perspective:900px; z-index:1; }
-.star3d .spin { position:absolute; inset:0; transform-style:preserve-3d; animation: spin3d 14s linear infinite; }
+.star3d .spin { position:absolute; inset:0; transform-style:preserve-3d; animation: sway3d 6s ease-in-out infinite; }
 .star3d .ly { position:absolute; inset:0; clip-path: polygon(50% 0%, 61.8% 35.1%, 98.1% 35.1%, 68.8% 56.7%, 79.4% 91%, 50% 70%, 20.6% 91%, 31.2% 56.7%, 1.9% 35.1%, 38.2% 35.1%);
   background:linear-gradient(135deg, #9fb8e8, #4a5f9a); }
 .star3d .face { background:radial-gradient(circle at 35% 30%, #ffffff, #dfe9ff 55%, #a9c3ff); display:flex; align-items:center; justify-content:center; }
 .star3d .face span { font-family:"Orbitron",sans-serif; font-weight:800; font-size:clamp(22px,2.8vw,34px); color:#05060f; margin-top:12%; }
 .star3d .glow { position:absolute; inset:-25%; border-radius:50%; background:radial-gradient(circle, rgba(127,212,255,.45), rgba(47,123,255,.15) 45%, transparent 70%); animation: glowp 3s ease-in-out infinite; }
-@keyframes spin3d { from { transform:rotateY(0deg) rotateX(8deg); } to { transform:rotateY(360deg) rotateX(8deg); } }
+@keyframes sway3d { 0%,100% { transform:translateY(0) rotateY(-28deg) rotateX(10deg) rotateZ(-3deg); } 50% { transform:translateY(-10px) rotateY(28deg) rotateX(4deg) rotateZ(3deg); } }
 @keyframes glowp { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.08); } }
-@media (prefers-reduced-motion: reduce) { .star3d .spin { animation-duration:40s; } }
+@media (prefers-reduced-motion: reduce) { .star3d .spin { animation-duration:14s; } }
 @media (max-width:700px) { .star3d { opacity:.4; } }
 .vcard.tt { width:270px; }
 .vcard.tt iframe { aspect-ratio:9/16; min-height:560px; }
