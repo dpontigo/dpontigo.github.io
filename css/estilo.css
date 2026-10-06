@@ -386,3 +386,18 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .split-temas .block { display:flex; flex-direction:column; }
 .split-temas .block p { flex:1; }
 @media (max-width:640px) { .split-temas { grid-template-columns:1fr; } }
+
+/* ===== Anexión: sección Anexionistas (reutiliza la ficha .dossier, sin sello) ===== */
+.anx-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:900px) { .anx-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px) { .anx-grid { grid-template-columns:1fr; } }
+a.dossier { display:flex; }
+.dossier.anx { display:flex; flex-direction:column; }
+.anx .anx-perfil { margin:12px 0 0; flex:1; font-size:15px; line-height:1.5; color:var(--muted); }
+.anx .prox, .anx .leer { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:14px; padding:7px 11px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; }
+.anx .prox { color:var(--muted); border:1px dashed rgba(127,212,255,.35); }
+.anx .leer { color:#fff; border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
+.anx .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+a.anx:hover .leer, a.anx:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
+a.anx:hover .leer::after { transform:translateX(4px); }
+a.anx:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
