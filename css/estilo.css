@@ -573,3 +573,6 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 @keyframes vscan { to { top:88%; } }
 @media (max-width:900px) { .vtarget { right:40px; } }
 @media (prefers-reduced-motion:reduce) { .vtarget::after { animation:none; } }
+/* Anexionistas: foto a color (sin sello) */
+.dossier .foto.color { filter:none; }
+.dossier .foto.color img { object-position:center 28%; }
