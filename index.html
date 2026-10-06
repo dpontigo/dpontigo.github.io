@@ -182,6 +182,8 @@
   .vcard.tt { width:270px; }
   .vcard.tt iframe { aspect-ratio:9/16; min-height:560px; }
   .track { align-items:flex-start; }
+  .ttwrap { display:flex; justify-content:center; margin:0 0 22px; }
+  .ttwrap .tiktok-embed { margin:0 !important; border-radius:6px; overflow:hidden; box-shadow:0 0 0 1px var(--line), 0 0 24px rgba(47,123,255,.25); }
 </style>
 </head>
 <body>
@@ -256,6 +258,11 @@
     </section>
     <section id="videos">
       <h2>Videos</h2>
+      <div class="ttwrap">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@therealnapoleon23/video/7684406036735790366" data-video-id="7684406036735790366" style="max-width:605px; min-width:325px;">
+          <section><a target="_blank" href="https://www.tiktok.com/@therealnapoleon23/video/7684406036735790366">@therealnapoleon23</a></section>
+        </blockquote>
+      </div>
       <div class="marquee"><div class="track" id="vtrack"><div class="vcard"><div class="frame">▶</div><strong>Video 1</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 2</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 3</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 4</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 5</strong></div></div></div>
     </section>
     <section id="fletes">
@@ -290,5 +297,6 @@
   document.addEventListener('keydown',e=>{ if(e.key==='Escape') menu(false); });
   document.addEventListener('click',e=>{ if(hdr.classList.contains('open') && !hdr.contains(e.target)) menu(false); });
 </script>
+<script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>
