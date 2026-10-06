@@ -115,6 +115,18 @@
     document.addEventListener('visibilitychange', pz);
   }
 
+  // Submenú de Anexión: en escritorio se abre con el ratón o el teclado (CSS :hover / :focus-within);
+  // la flechita lo abre/cierra con un toque (tabletas) y Escape lo cierra.
+  [].slice.call(document.querySelectorAll('.nav-sub')).forEach(function (ns) {
+    var sb = ns.querySelector('.sub-btn');
+    var set = function (o) { ns.classList.toggle('open', o); if (sb) sb.setAttribute('aria-expanded', o); };
+    if (sb) sb.addEventListener('click', function (e) { e.stopPropagation(); ns.classList.remove('closed'); set(!ns.classList.contains('open')); });
+    ns.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); ns.classList.add('closed'); var m = ns.querySelector('a'); if (m) m.focus(); } });
+    ns.addEventListener('mouseleave', function () { ns.classList.remove('closed'); set(false); });
+    ns.addEventListener('focusout', function (e) { if (!ns.contains(e.relatedTarget)) { ns.classList.remove('closed'); set(false); } });
+    document.addEventListener('click', function (e) { if (!ns.contains(e.target)) set(false); });
+  });
+
   // Menú móvil (hamburguesa)
   var hdr = document.querySelector('header'), mb = document.querySelector('.menu-btn');
   if (hdr && mb) {

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791298208">
+<link rel="stylesheet" href="css/estilo.css?v=1791298738">
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,7 +19,13 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
-      <a href="anexion.html" class="on" aria-current="page">Anexión</a>
+      <div class="nav-sub">
+        <a href="anexion.html" class="on" aria-current="page">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
+        <div class="submenu" id="sub-anexion">
+          <a href="anexion.html#articulos">Artículos</a>
+          <a href="anexionistas.html">Anexionistas</a>
+        </div>
+      </div>
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html">Represores</a>
@@ -92,71 +98,15 @@
     </section>
     <section id="anexionistas">
       <h2>Anexionistas</h2>
-      <p class="nota">Cubanos que defienden la anexión a los Estados Unidos: su rostro, su historia y su perfil.</p>
-      <div class="dossiers anx-grid">
-        <!--
-          CÓMO RELLENAR UNA TARJETA DE ANEXIONISTA (solo con datos verificados):
-          1. Foto: sube el retrato a img/anexionistas/NOMBRE.jpg (vertical, unos 800 px de alto) y cambia
-             <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-             por
-             <div class="foto"><img src="img/anexionistas/NOMBRE.jpg" alt="Nombre de la persona"></div>
-             (se mostrará en blanco y negro automáticamente).
-          2. Nombre: sustituye <dd>[Pendiente]</dd> por el nombre completo.
-          3. Perfil: sustituye el texto de <p class="anx-perfil">...</p> por un resumen breve (2-3 líneas).
-          4. Enlace: cuando exista su página de perfil (por ejemplo anexionista-NOMBRE.html, hecha como articulo-1.html),
-             cambia <article class="dossier anx"> por <a class="dossier anx" href="anexionista-NOMBRE.html">,
-             el cierre </article> por </a>,
-             y <span class="prox">Próximamente</span> por <span class="leer">Ver perfil</span>.
-          Para añadir más tarjetas, copia un bloque completo y cambia el número (ANX-007, ANX-008...).
-        -->
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-001</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-002</span></div>
-          <div class="foto color"><img src="img/anexionistas/anx-002.jpg" alt="Foto del anexionista ANX-002" width="800" height="660" loading="lazy"></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-003</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-004</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-005</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-        <article class="dossier anx">
-          <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-006</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
-      </div>
+      <a class="anx-teaser" href="anexionistas.html">
+        <div class="tz-fotos" aria-hidden="true"><span class="tz"><img src="img/anexionistas/anx-002.jpg" alt="" width="800" height="660" loading="lazy"></span><span class="tz sil"></span><span class="tz sil"></span></div>
+        <div class="tz-txt"><p>Cubanos que defienden la anexión a los Estados Unidos: su rostro, su historia y su perfil.</p><span class="leer">Ver Anexionistas</span></div>
+      </a>
     </section>
   </main>
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791298208"></script>
+<script src="js/sitio.js?v=1791298738"></script>
 </body>
 </html>
