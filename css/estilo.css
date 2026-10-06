@@ -668,3 +668,8 @@ section[id] { scroll-margin-top:130px; }
 .anx-perfil:has(.anx-mas[open]) .anx-corta { display:none; }
 .anx a.leer:hover, .anx a.leer:focus-visible { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); outline:none; }
 .anx a.leer:hover::after { transform:translateX(4px); }
+
+/* ===== Página de preso: títulos de sección y lista con etiquetas ===== */
+.preso-texto h2 { margin:34px 0 14px; font-size:17px; }
+.preso-texto ul.datos-lista li strong { color:#fff; font-weight:600; margin-right:4px; }
+@media (max-width:600px) { .preso-texto h2 { font-size:15px; letter-spacing:.14em; } }
