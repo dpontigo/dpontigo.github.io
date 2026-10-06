@@ -299,3 +299,5 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 
 /* ----- Barra superior en móvil: que quepa en una línea ----- */
 @media (max-width:480px) { .bar { font-size:10px; letter-spacing:.12em; padding:8px 6px; } }
+
+.tema audio.player { width:100%; margin-top:14px; height:42px; border-radius:6px; filter: drop-shadow(0 0 8px rgba(47,123,255,.45)); color-scheme:dark; }
