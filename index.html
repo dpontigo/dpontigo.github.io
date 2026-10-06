@@ -77,6 +77,16 @@
   .hero-card::before { content:"// ESTRELLA 51 · USA + CUBA"; }
   .tag { display:inline-block; margin-top:16px; font-family:"Orbitron",sans-serif; font-size:11px; letter-spacing:.25em; padding:8px 12px; border:1px solid var(--cyan); color:#fff; box-shadow:0 0 12px rgba(127,212,255,.4); }
   @media (max-width:700px) { .star51 { opacity:.35; } }
+  .marquee { overflow:hidden; position:relative; mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+  .track { display:flex; gap:18px; width:max-content; animation: slide 40s linear infinite; }
+  .marquee:hover .track { animation-play-state:paused; }
+  @keyframes slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  .vcard { width:320px; flex:none; background:var(--panel); border:1px solid var(--line); border-radius:4px; overflow:hidden; position:relative; }
+  .vcard::before { content:""; position:absolute; left:0; right:0; top:0; height:2px; background:var(--red); box-shadow:0 0 12px var(--red); z-index:1; }
+  .vcard:nth-child(even)::before { background:var(--blue); box-shadow:0 0 12px var(--blue); }
+  .vcard .frame { aspect-ratio:16/9; background:linear-gradient(135deg, rgba(47,123,255,.2), rgba(255,45,75,.15)); display:flex; align-items:center; justify-content:center; font-size:40px; color:#fff; text-shadow:0 0 14px var(--cyan); }
+  .vcard iframe, .vcard video { width:100%; aspect-ratio:16/9; border:0; display:block; background:#000; }
+  .vcard strong { display:block; font-family:"Orbitron",sans-serif; font-size:13px; letter-spacing:.12em; padding:12px 14px 14px; color:#fff; }
 </style>
 </head>
 <body>
@@ -121,10 +131,7 @@
     </section>
     <section id="videos">
       <h2>Videos</h2>
-      <div class="grid">
-        <article class="card"><div class="ph"></div><strong>Video 1</strong><span>El enlace va aquí.</span></article>
-        <article class="card"><div class="ph"></div><strong>Video 2</strong><span>El enlace va aquí.</span></article>
-      </div>
+      <div class="marquee"><div class="track" id="vtrack"><div class="vcard"><div class="frame">▶</div><strong>Video 1</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 2</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 3</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 4</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 5</strong></div></div></div>
     </section>
     <section id="fletes">
       <h2>Represores</h2>
@@ -142,5 +149,9 @@
     </section>
   </main>
   <footer><div class="inner"><span>PROHIBIDO OLVIDAR</span><span class="stars">★★★★★</span></div></footer>
+<script>
+  // duplica los videos para que el desplazamiento sea continuo
+  const t=document.getElementById('vtrack'); t.innerHTML += t.innerHTML;
+</script>
 </body>
 </html>
