@@ -1,4 +1,4 @@
-/* PROHIBIDO OLVIDAR — script común a todas las páginas */
+/* CUBALIBRE51 — script común a todas las páginas */
 (function () {
   // Marquesina de videos (portada): duplica las tarjetas para que el desplazamiento sea continuo
   var t = document.getElementById('vtrack');

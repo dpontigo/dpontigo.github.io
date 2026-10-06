@@ -5,7 +5,7 @@
   </defs>
   <rect width="640" height="160" fill="#05060f"/>
   <image href="logo.svg" x="16" y="20" width="120" height="120"/>
-  <text x="156" y="78" font-family="Orbitron, Arial Black, sans-serif" font-weight="800" font-size="40" letter-spacing="5" fill="url(#txt)" filter="url(#t)">PROHIBIDO</text>
-  <text x="156" y="124" font-family="Orbitron, Arial Black, sans-serif" font-weight="800" font-size="40" letter-spacing="5" fill="#ffffff" filter="url(#t)">OLVIDAR</text>
-  <text x="400" y="124" font-family="Orbitron, Arial, sans-serif" font-size="16" letter-spacing="6" fill="#ff2d4b">★ ★ ★</text>
+  <text x="156" y="78" font-family="Orbitron, Arial Black, sans-serif" font-weight="800" font-size="40" letter-spacing="5" fill="url(#txt)" filter="url(#t)">CUBA</text>
+  <text x="156" y="124" font-family="Orbitron, Arial Black, sans-serif" font-weight="800" font-size="40" letter-spacing="5" fill="#ffffff" filter="url(#t)">LIBRE51</text>
+  <text x="430" y="124" font-family="Orbitron, Arial, sans-serif" font-size="16" letter-spacing="6" fill="#ff2d4b">★ ★ ★</text>
 </svg>
