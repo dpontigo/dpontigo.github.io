@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Videos · Prohibido Olvidar</title>
+<meta name="description" content="Lo que está pasando en Cuba, en imágenes.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
+  <header>
+    <div class="top"><a class="logo" href="index.html"><img src="logo.svg" alt="" width="42" height="49">PROHIBIDO OLVIDAR <span class="stars">★★★</span></a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
+    <nav id="menu" aria-label="Secciones">
+      <a href="index.html">Inicio</a>
+      <a href="anexion.html">Anexión</a>
+      <a href="presos-politicos.html">Presos Políticos</a>
+      <a href="videos.html" class="on" aria-current="page">Videos</a>
+      <a href="represores.html">Represores</a>
+      <a href="canciones.html">Canciones</a>
+    </nav>
+  </header>
+  <div class="hero phero">
+    <div class="hero-bg" aria-hidden="true"><div class="bg bg-videos on"></div></div>
+    <div class="stripes"></div><div class="field"></div><div class="scan"></div>
+    <div class="phero-mark" aria-hidden="true">▶<small>SECCIÓN 03</small></div>
+    <div class="hero-inner">
+      <div class="hero-card">
+        <div class="kicker"><a href="index.html">// INICIO</a> / VIDEOS</div>
+        <h1>Videos</h1>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="intro-wrap"><p class="intro">Lo que está pasando, en imágenes. Los videos se irán publicando aquí.</p></div>
+    <section id="videos">
+      <h2>Galería</h2>
+      <!--
+        CÓMO PONER UN VIDEO PROPIO (archivo alojado en la web):
+        1. Sube el archivo a la carpeta videos/  (por ejemplo videos/video-1.mp4; MP4 H.264 funciona en todos los navegadores).
+        2. Opcional: sube una imagen de portada a img/  (por ejemplo img/poster-video-1.jpg).
+        3. En la tarjeta, sustituye toda la línea <div class="frame">...</div> por:
+
+           <video controls preload="metadata" playsinline poster="img/poster-video-1.jpg">
+             <source src="videos/video-1.mp4" type="video/mp4">
+             Tu navegador no puede reproducir este video.
+           </video>
+
+        4. Cambia "Video 1" por el título y la línea [Pendiente] por la fecha o descripción.
+        (Nota: GitHub limita cada archivo a 100 MB; mejor videos comprimidos de pocos MB.)
+      -->
+      <div class="vgrid">
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 1</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 2</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 3</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 4</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 5</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+        <div class="vcard">
+          <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶</span><span class="dur">--:--</span></div>
+          <strong>Video 6</strong><span class="meta">Título y fecha: [Pendiente]</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="inner"><span>PROHIBIDO OLVIDAR</span><span class="stars">★★★★★</span>
+    </div></footer>
+<script src="js/sitio.js"></script>
+</body>
+</html>
