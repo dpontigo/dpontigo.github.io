@@ -1,0 +1,30 @@
+CRÉDITOS DE IMÁGENES — PROHIBIDO OLVIDAR
+=========================================
+Las fotos de fondo de la portada proceden de Wikimedia Commons. Se han
+redimensionado a 1600 px de ancho y recomprimido en JPG (la de presos políticos,
+además, recortada y ligeramente suavizada). En la web se muestran oscurecidas
+con un degradado. Cada imagen conserva su licencia original; las obras derivadas
+de imágenes CC BY-SA se comparten bajo la misma licencia CC BY-SA.
+
+1) img/hero-anexion.jpg  (portada: ANEXIÓN)
+   Título:   El Malecon Havanna Sunset (16443824281).jpg
+   Autor:    Ashu Mathura (from Amsterdam, The Netherlands)
+   Licencia: CC BY-SA 2.0 — https://creativecommons.org/licenses/by-sa/2.0/
+   Fuente:   https://commons.wikimedia.org/wiki/File:El_Malecon_Havanna_Sunset_(16443824281).jpg
+
+2) img/hero-presos.jpg  (portada: PRESOS POLÍTICOS)
+   Título:   Rolls of razor barbed wire fence at a prison correctional facility.jpg
+   Autor:    Tony Webster
+   Licencia: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+   Fuente:   https://commons.wikimedia.org/wiki/File:Rolls_of_razor_barbed_wire_fence_at_a_prison_correctional_facility.jpg
+   Nota:     Alambrada y concertina de una prisión (sin personas). Recortada.
+
+3) img/hero-videos.jpg  (portada: VIDEOS)
+   Título:   Havana (Cuba, February 2023) - 131.jpg
+   Autor:    Bruno Rijsman
+   Licencia: CC BY-SA 2.0 — https://creativecommons.org/licenses/by-sa/2.0/
+   Fuente:   https://commons.wikimedia.org/wiki/File:Havana_(Cuba,_February_2023)_-_131.jpg
+             (original en Flickr: https://www.flickr.com/photos/37003135@N00/52727611311/)
+
+Las siluetas de los expedientes de Presos Políticos son dibujos genéricos hechos
+con CSS; no representan a ninguna persona real.

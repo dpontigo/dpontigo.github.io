@@ -100,13 +100,82 @@
   .hero-card::before { content:none; }
   .hero-card { max-width:620px; }
   @media (max-width:600px) { .slide h1 { font-size:32px; } .slides { min-height:280px; } }
+  /* ===== Fondos fotográficos del slider (uno por diapositiva, con fundido) ===== */
+  .hero-bg { position:absolute; inset:0; overflow:hidden; background:var(--bg); }
+  .hero-bg .bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transform:scale(1.08);
+    transition:opacity 1.2s ease, transform 7s ease-out; filter:saturate(.85) contrast(1.05); }
+  .hero-bg .bg.on { opacity:1; transform:scale(1); }
+  .hero-bg .bg-anexion { background-image:url(img/hero-anexion.jpg); background-position:center 40%; }
+  .hero-bg .bg-presos { background-image:url(img/hero-presos.jpg); background-position:center 30%; }
+  .hero-bg .bg-videos { background-image:url(img/hero-videos.jpg); background-position:center 55%; }
+  .hero-bg::after { content:""; position:absolute; inset:0; pointer-events:none;
+    background: linear-gradient(90deg, rgba(5,6,15,.88) 0%, rgba(5,6,15,.6) 36%, rgba(5,6,15,.22) 68%, rgba(5,6,15,.38) 100%),
+      linear-gradient(180deg, rgba(5,6,15,.45) 0%, transparent 25%, transparent 70%, rgba(5,6,15,.92) 100%),
+      linear-gradient(135deg, rgba(47,123,255,.2), rgba(255,45,75,.12)); }
+  .hero .stripes { opacity:.32; }
+  .hero .cuba { opacity:.42; }
+  @media (max-width:760px) { .hero-bg::after { background: linear-gradient(180deg, rgba(5,6,15,.35) 0%, rgba(5,6,15,.5) 55%, rgba(5,6,15,.92) 100%), linear-gradient(135deg, rgba(47,123,255,.2), rgba(255,45,75,.12)); }
+    .hero-card { background:rgba(10,13,32,.62); } }
+  @media (prefers-reduced-motion:reduce) { .hero-bg .bg { transition:opacity .6s; transform:none; } }
+
+  /* ===== Expedientes (Presos Políticos) ===== */
+  .nota { margin:-6px 0 18px; font-size:15px; color:var(--muted); }
+  .nota b { color:var(--cyan); font-weight:600; }
+  .dossiers { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
+  .dossier { position:relative; background:linear-gradient(180deg, rgba(20,24,46,.92), rgba(10,12,28,.92)); border:1px solid var(--line); border-top:3px solid var(--red);
+    padding:16px 16px 20px; overflow:hidden; transition:.25s; box-shadow: inset 0 0 26px rgba(47,123,255,.08); }
+  .dossier:nth-child(even) { border-top-color:var(--blue); }
+  .dossier:hover { border-color:var(--cyan); box-shadow:0 0 22px rgba(127,212,255,.22); transform:translateY(-3px); }
+  .exp-head { display:flex; justify-content:space-between; align-items:center; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.25em; color:var(--muted);
+    border-bottom:1px dashed rgba(127,212,255,.3); padding-bottom:10px; margin-bottom:14px; }
+  .exp-n { color:#fff; font-size:12px; letter-spacing:.15em; padding:3px 8px; border:1px solid var(--cyan); box-shadow:0 0 10px rgba(127,212,255,.3); }
+  .dossier .foto { position:relative; aspect-ratio:4/5; max-height:260px; width:100%; overflow:hidden; filter:grayscale(1);
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 2px, transparent 2px 4px), linear-gradient(180deg, #2a2d36, #15171d);
+    border:1px solid rgba(255,255,255,.12); }
+  /* silueta genérica (no es una persona real) */
+  .dossier .foto::before { content:""; position:absolute; left:50%; top:22%; width:30%; aspect-ratio:1; transform:translateX(-50%); border-radius:50%; background:#5b5f6b; }
+  .dossier .foto::after { content:""; position:absolute; left:50%; bottom:0; width:66%; height:38%; transform:translateX(-50%); border-radius:50% 50% 0 0 / 70% 70% 0 0; background:#5b5f6b; }
+  .dossier .foto img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+  .dossier .foto .pend { position:absolute; left:8px; top:8px; z-index:2; font-family:"Orbitron",sans-serif; font-size:9px; letter-spacing:.25em; color:#cfd3dc; background:rgba(0,0,0,.55); padding:4px 6px; }
+  .dossier dl { margin:14px 0 0; display:grid; grid-template-columns:auto 1fr; gap:8px 10px; align-items:baseline; }
+  .dossier dt { font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.2em; color:var(--cyan); }
+  .dossier dd { margin:0; font-family:"Courier New", ui-monospace, monospace; font-size:15px; color:#fff; border-bottom:1px dotted rgba(255,255,255,.25); padding-bottom:3px; }
+  .sello { position:absolute; right:12px; bottom:102px; z-index:3; transform:rotate(-14deg); font-family:"Orbitron",sans-serif; font-weight:800; font-size:15px; letter-spacing:.14em;
+    color:var(--red); border:3px double var(--red); padding:6px 10px; border-radius:4px; text-align:center; line-height:1.1; opacity:.88; pointer-events:none;
+    text-shadow:0 0 8px rgba(255,45,75,.7); box-shadow:0 0 14px rgba(255,45,75,.45), inset 0 0 10px rgba(255,45,75,.3); background:rgba(5,6,15,.35); }
+
+  /* ===== Menú móvil (hamburguesa) ===== */
+  .menu-btn { display:none; width:44px; height:40px; padding:0; background:transparent; border:1px solid var(--cyan); border-radius:3px; cursor:pointer; position:relative;
+    box-shadow:0 0 12px rgba(127,212,255,.4), inset 0 0 10px rgba(127,212,255,.15); }
+  .menu-btn span { position:absolute; left:10px; right:10px; height:2px; background:#fff; box-shadow:0 0 6px var(--cyan), 0 0 12px var(--blue); transition:.25s; }
+  .menu-btn span:nth-child(1) { top:12px; } .menu-btn span:nth-child(2) { top:19px; background:var(--red); box-shadow:0 0 8px var(--red); } .menu-btn span:nth-child(3) { top:26px; }
+  header.open .menu-btn span:nth-child(1) { top:19px; transform:rotate(45deg); }
+  header.open .menu-btn span:nth-child(2) { opacity:0; }
+  header.open .menu-btn span:nth-child(3) { top:19px; transform:rotate(-45deg); }
+  @media (max-width:759.98px) {
+    .top { padding:10px 16px; }
+    .logo { font-size:14px; letter-spacing:.14em; white-space:nowrap; display:flex; align-items:center; gap:4px; }
+    .logo img { width:34px; height:auto; }
+    .logo .stars { font-size:10px; letter-spacing:.2em; }
+    .menu-btn { display:block; flex:none; }
+    nav { position:absolute; left:0; right:0; top:100%; flex-direction:column; gap:2px; padding:10px 16px 16px; max-width:none;
+      background:rgba(5,6,15,.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); box-shadow:0 18px 30px rgba(0,0,0,.6), 0 2px 0 rgba(47,123,255,.4);
+      opacity:0; visibility:hidden; transform:translateY(-8px); transition:opacity .22s, transform .22s, visibility 0s .22s; }
+    header.open nav { opacity:1; visibility:visible; transform:none; transition:opacity .22s, transform .22s; }
+    nav a { font-size:13px; padding:14px 12px; border:1px solid transparent; border-left:2px solid var(--red); color:#fff; }
+    nav a:nth-child(even) { border-left-color:var(--blue); }
+  }
+  .credits { flex-basis:100%; font-family:"Rajdhani",sans-serif; font-size:12px; letter-spacing:.05em; color:rgba(154,166,200,.7); }
+  .credits a { text-decoration:underline; text-underline-offset:2px; }
+  .credits a:hover { color:var(--cyan); }
 </style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
   <header>
-    <div class="top"><div class="logo"><img src="logo.svg" alt="" width="42" height="49" style="margin-right:6px;filter:drop-shadow(0 0 8px rgba(47,123,255,.7))">PROHIBIDO OLVIDAR <span class="stars">★★★</span></div></div>
-    <nav>
+    <div class="top"><div class="logo"><img src="logo.svg" alt="" width="42" height="49" style="margin-right:6px;filter:drop-shadow(0 0 8px rgba(47,123,255,.7))">PROHIBIDO OLVIDAR <span class="stars">★★★</span></div>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
+    <nav id="menu">
       <a href="#inicio">Inicio</a>
       <a href="#articulos">Anexión</a>
       <a href="#fotos">Presos Políticos</a>
@@ -116,6 +185,7 @@
     </nav>
   </header>
   <div class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true"><div class="bg bg-anexion on"></div><div class="bg bg-presos"></div><div class="bg bg-videos"></div></div>
     <div class="stripes"></div><div class="field"></div><div class="scan"></div><div class="cuba"></div><div class="star51">★<span>51</span></div>
     <div class="hero-inner">
       <div class="hero-card">
@@ -139,10 +209,35 @@
     </section>
     <section id="fotos">
       <h2>Presos Políticos</h2>
-      <div class="grid">
-        <article class="card"><div class="ph"></div><strong>Foto 1</strong><span>Hueco para la imagen.</span></article>
-        <article class="card"><div class="ph"></div><strong>Foto 2</strong><span>Hueco para la imagen.</span></article>
-        <article class="card"><div class="ph"></div><strong>Foto 3</strong><span>Hueco para la imagen.</span></article>
+      <p class="nota"><b>Fichas pendientes:</b> se completarán con datos verificados.</p>
+      <div class="dossiers">
+        <!--
+          CÓMO AÑADIR UN EXPEDIENTE:
+          1. Copia un bloque completo <article class="dossier"> ... </article> y pégalo debajo del último.
+          2. Cambia el número (EXP-004, EXP-005...).
+          3. Sustituye cada [Pendiente] por el dato verificado (nombre, condena, prisión).
+          4. Foto: sube la imagen a img/ y cambia la línea <div class="foto">...</div> por
+             <div class="foto"><img src="img/NOMBRE-ARCHIVO.jpg" alt="Nombre de la persona"></div>
+             (se mostrará en blanco y negro automáticamente).
+        -->
+        <article class="dossier">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-001</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
+          <div class="sello">PROHIBIDO<br>OLVIDAR</div>
+        </article>
+        <article class="dossier">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-002</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
+          <div class="sello">PROHIBIDO<br>OLVIDAR</div>
+        </article>
+        <article class="dossier">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-003</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
+          <div class="sello">PROHIBIDO<br>OLVIDAR</div>
+        </article>
       </div>
     </section>
     <section id="videos">
@@ -164,14 +259,22 @@
       </div>
     </section>
   </main>
-  <footer><div class="inner"><span>PROHIBIDO OLVIDAR</span><span class="stars">★★★★★</span></div></footer>
+  <footer><div class="inner"><span>PROHIBIDO OLVIDAR</span><span class="stars">★★★★★</span>
+    <span class="credits">Fotos de portada: Wikimedia Commons (CC BY / CC BY-SA) · <a href="img/CREDITOS.txt">créditos y licencias</a></span></div></footer>
 <script>
   // duplica los videos para que el desplazamiento sea continuo
   const t=document.getElementById('vtrack'); t.innerHTML += t.innerHTML;
-  const sl=[...document.querySelectorAll('.slide')], dt=[...document.querySelectorAll('.dots button')]; let i=0;
-  function go(n){ sl[i].classList.remove('on'); dt[i].classList.remove('on'); i=n; sl[i].classList.add('on'); dt[i].classList.add('on'); }
+  const sl=[...document.querySelectorAll('.slide')], dt=[...document.querySelectorAll('.dots button')], bg=[...document.querySelectorAll('.hero-bg .bg')]; let i=0;
+  function go(n){ [sl,dt,bg].forEach(a=>a[i]&&a[i].classList.remove('on')); i=n; [sl,dt,bg].forEach(a=>a[i]&&a[i].classList.add('on')); }
   dt.forEach((b,n)=>b.onclick=()=>{ go(n); });
   setInterval(()=>go((i+1)%sl.length), 5000);
+  // menú móvil
+  const hdr=document.querySelector('header'), mb=document.querySelector('.menu-btn');
+  function menu(o){ hdr.classList.toggle('open',o); mb.setAttribute('aria-expanded',o); mb.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú'); }
+  mb.onclick=()=>menu(!hdr.classList.contains('open'));
+  document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>menu(false)));
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') menu(false); });
+  document.addEventListener('click',e=>{ if(hdr.classList.contains('open') && !hdr.contains(e.target)) menu(false); });
 </script>
 </body>
 </html>
