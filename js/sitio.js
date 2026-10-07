@@ -140,4 +140,31 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') menu(false); });
     document.addEventListener('click', function (e) { if (hdr.classList.contains('open') && !hdr.contains(e.target)) menu(false); });
   }
+
+  // Audio de fondo solo en Presos Políticos (#presos-bg). Sin controles; si el navegador
+  // bloquea el autoplay con sonido, arranca en el primer clic/toque/tecla.
+  var bg = document.getElementById('presos-bg');
+  if (bg) {
+    bg.volume = 0.45;
+    bg.loop = false;
+    var start = function () {
+      var p = bg.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    var arm = function () {
+      start();
+      document.removeEventListener('click', arm, true);
+      document.removeEventListener('touchstart', arm, true);
+      document.removeEventListener('keydown', arm, true);
+    };
+    var tryPlay = bg.play();
+    if (tryPlay && tryPlay.catch) {
+      tryPlay.catch(function () {
+        document.addEventListener('click', arm, true);
+        document.addEventListener('touchstart', arm, { capture: true, passive: true });
+        document.addEventListener('keydown', arm, true);
+      });
+    }
+  }
+
 })();
