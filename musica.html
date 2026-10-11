@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="copyright" content="© 2026 CubaLibre51">
+<title>Música · CubaLibre51</title>
+<meta name="description" content="Tienda de música CubaLibre51. Cerrada. Cada canción costará 0.99 dólares.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/estilo.css?v=6">
+<style>
+.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}
+.tienda-cerrada{margin:1rem 0;padding:.8rem 1rem;border:1px solid #c45c26;color:#f0d2b0}
+.tema{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.tema strong{font-size:1.15rem}
+.tema .precio{color:#7ec8ff;font-family:Orbitron,sans-serif}
+.tema button{grid-column:1 / -1;justify-self:start;opacity:.55;cursor:not-allowed}
+</style>
+</head>
+<body>
+  <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
+  <header>
+    <div class="top"><a class="logo" href="index.html"><img src="logo.svg" alt="" width="42" height="49">CUBALIBRE51 <span class="stars">★★★</span></a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
+    <nav id="menu" aria-label="Secciones">
+      <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
+      <div class="nav-sub">
+        <a href="anexion.html">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
+        <div class="submenu" id="sub-anexion">
+          <a href="anexion.html#articulos">Artículos</a>
+          <a href="anexionistas.html">Anexionistas</a>
+        </div>
+      </div>
+      <a href="presos-politicos.html">Presos Políticos</a>
+      <a href="videos.html">Videos</a>
+      <a href="represores.html">Represores</a>
+      <div class="nav-sub">
+        <a href="canciones.html" class="on" aria-current="page">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="hero phero art-hero">
+    <div class="hero-bg" aria-hidden="true"><div class="bg bg-canciones on"></div></div>
+    <div class="stripes"></div><div class="field"></div><div class="scan"></div>
+    <div class="hero-inner"><div class="hero-card"><h1>Música</h1></div></div>
+  </div>
+  <main>
+    <div class="articulo-wrap">
+      <p class="tienda-cerrada">Tienda cerrada. Nadie puede comprar ni escuchar todavía. El precio previsto es 0,99 dólares por canción.</p>
+      <p>Todo lo que se venda aquí será donado para ayudar a los presos políticos cubanos: apoyo a las familias, gestiones de defensa y lo que haga falta para que no queden olvidados.</p>
+      <article class="articulo">
+        <div class="tema"><div><strong>Los Estamos Olvidando</strong><p>Tema 1</p></div><span class="precio">$0.99</span><button class="btn" type="button" disabled>No disponible</button></div>
+        <div class="tema"><div><strong>El Carcelero de Sueños</strong><p>Tema 2 · Rap protesta</p></div><span class="precio">$0.99</span><button class="btn" type="button" disabled>No disponible</button></div>
+        <div class="tema"><div><strong>La Miel Ajena</strong><p>Tema 3 · Canción</p></div><span class="precio">$0.99</span><button class="btn" type="button" disabled>No disponible</button></div>
+        <div class="tema"><div><strong>La Falsa Nostalgia</strong><p>Tema 4 · Rap</p></div><span class="precio">$0.99</span><button class="btn" type="button" disabled>No disponible</button></div>
+        <div class="tema"><div><strong>Destinada</strong><p>Tema 5 · Rap protesta</p></div><span class="precio">$0.99</span><button class="btn" type="button" disabled>No disponible</button></div>
+      </article>
+    </div>
+  </main>
+  <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span></div>
+    <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
+<script src="js/sitio.js?v=5"></script>
+</body>
+</html>

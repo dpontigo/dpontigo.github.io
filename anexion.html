@@ -10,7 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="stylesheet" href="css/estilo.css?v=6">
+<style>.leer::after,.btn::after,.btn-ver::after,a.leer::after,.card a::after{content:none !important}</style>
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +21,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html" class="on" aria-current="page">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +32,13 @@
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero phero">
@@ -43,7 +52,7 @@
     </div>
   </div>
   <main>
-    <div class="intro-wrap"><p class="intro">Cuba, la estrella 51. Artículos y argumentos por un futuro de libertad bajo las barras y las estrellas.</p></div>
+    <div class="intro-wrap"><p class="intro">Aquí se puede formar una idea clara de la anexión. No es un lema ni una consigna. Los artículos explican qué significa que un país incorpore un territorio, cómo lo ha hecho Estados Unidos con Texas y Hawái, y qué se discute cuando se plantea que Cuba pase a formar parte de la Unión. Cada texto se puede leer solo. Juntos dan el mapa: la historia, el significado y las maneras de anexar.</p></div>
     <section id="articulos">
       <h2>Artículos</h2>
       <!--
@@ -72,27 +81,24 @@
           <p>Hawái no se anexó como Texas. En 1893 un grupo local derrocó a la reina con apoyo del enviado de Estados Unidos…</p>
           <span class="leer">Leer artículo</span>
         </a>
-        <article class="card art">
-          <div class="ph"><span class="num">04</span><span class="pend">IMAGEN PENDIENTE</span></div>
-          <time>FECHA: [PENDIENTE]</time>
-          <strong>[Pendiente]</strong>
-          <p>Extracto pendiente. Aquí irá un resumen breve del artículo.</p>
-          <span class="prox">PRÓXIMAMENTE</span>
-        </article>
-        <article class="card art">
-          <div class="ph"><span class="num">05</span><span class="pend">IMAGEN PENDIENTE</span></div>
-          <time>FECHA: [PENDIENTE]</time>
-          <strong>[Pendiente]</strong>
-          <p>Extracto pendiente. Aquí irá un resumen breve del artículo.</p>
-          <span class="prox">PRÓXIMAMENTE</span>
-        </article>
-        <article class="card art">
-          <div class="ph"><span class="num">06</span><span class="pend">IMAGEN PENDIENTE</span></div>
-          <time>FECHA: [PENDIENTE]</time>
-          <strong>[Pendiente]</strong>
-          <p>Extracto pendiente. Aquí irá un resumen breve del artículo.</p>
-          <span class="prox">PRÓXIMAMENTE</span>
-        </article>
+        <a class="card art art-link" href="articulo-4.html">
+          <div class="ph"><img src="img/articulo-4-card.jpg" alt="" loading="lazy" width="640" height="320"><span class="num">04</span></div>
+          <strong>Cuba frente a Florida: una integración por discutir</strong>
+          <p>A unas 100 millas de Florida, Cuba ocupa una posición estratégica. Para quienes defienden la anexión, integrar la isla a Estados Unidos es una oportunidad económica y de seguridad, no una solución mágica.</p>
+          <span class="leer">Leer artículo</span>
+        </a>
+        <a class="card art art-link" href="articulo-5.html">
+          <div class="ph"><img src="img/articulo-5-card.jpg" alt="" loading="lazy" width="640" height="320"><span class="num">05</span></div>
+          <strong>Qué es la anexión</strong>
+          <p>Texas, Hawái, Puerto Rico, Guam, Samoa Americana, las Islas Vírgenes y las Marianas del Norte muestran qué significa pasar a soberanía de Estados Unidos, y qué no.</p>
+          <span class="leer">Leer artículo</span>
+        </a>
+        <a class="card art art-link" href="articulo-6.html">
+          <div class="ph"><img src="img/articulo-6-card.jpg" alt="" loading="lazy" width="640" height="320"><span class="num">06</span></div>
+          <strong>Las maneras de anexar</strong>
+          <p>Tratado, resolución conjunta, cesión después de una guerra y admisión como estado. Sin un acto del Congreso y una cesión de soberanía, no hay anexión.</p>
+          <span class="leer">Leer artículo</span>
+        </a>
       </div>
     </section>
     <section id="anexionistas">
@@ -106,6 +112,6 @@
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791756720"></script>
+<script src="js/sitio.js?v=5"></script>
 </body>
 </html>

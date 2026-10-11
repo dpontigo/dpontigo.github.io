@@ -10,7 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="stylesheet" href="css/estilo.css?v=5">
+<style>.leer::after,.btn-ver::after,.btn::after{content:none !important}</style>
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +21,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +32,13 @@
       <a href="presos-politicos.html" class="on" aria-current="page">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero phero">
@@ -46,7 +55,10 @@
     <div class="intro-wrap"><p class="intro">Sus nombres y sus rostros. Que nadie los olvide.</p></div>
     <section id="fotos">
       <h2>Expedientes</h2>
-      <p class="nota"><b>Fichas pendientes:</b> se completarán solo con datos verificados.</p>
+
+      <p class="intro">En Cuba hay presos políticos. No es una figura retórica: son personas condenadas, o en prisión provisional, por salir a la calle, por grabar un video o por decir que el país vive bajo una dictadura. El 11 de julio de 2021 dejó sentencias de años. Lizandra Góngora, madre de cinco hijos, cumple 14 por protestar frente a una tienda. Félix Navarro, José Daniel Ferrer y otros nombres de esta lista llevan el mismo patrón: el tribunal llama sabotaje, desorden o atentado a lo que en la calle fue un reclamo. La tiranía no discute. Detiene, traslada lejos de la familia y deja que la condena haga el trabajo. Estas fichas son el registro. Cada una se publica con nombre, prisión y hecho, para que la víctima no quede en un número.</p>
+      <p class="nota" style="margin-top:22px">Las fichas pendientes se completan solo con datos verificados. Si conoces un caso, envíalo. No se publica sin revisión.</p>
+      <div class="ver-todo" style="justify-content:flex-start;margin-top:36px;margin-bottom:28px"><a class="btn-ver" href="reportar-preso.php">Enviar un preso político</a></div>
       <div class="dossiers">
         <!--
           CÓMO AÑADIR UN EXPEDIENTE:
@@ -84,33 +96,210 @@
           <dl><dt>NOMBRE:</dt><dd>María Cristina Garrido Rodríguez</dd><dt>ORIGEN:</dt><dd>Quivicán, Mayabeque</dd><dt>PRISIÓN:</dt><dd>Prisión de Mujeres de Occidente (El Guatao)</dd><dt>CONDENA:</dt><dd>7 años (11J)</dd></dl>
           <span class="leer">Ver expediente</span>
         </a>
-        <a class="dossier preso-link" href="preso-leoncio-rodriguez-ponce.html" aria-label="Ver expediente de Leoncio Rodríguez Ponce">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-031</span></div>
+        <a class="dossier preso-link" href="preso-eliane-martin.html" aria-label="Ver expediente de Eliane Martín">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-004</span></div>
           <div class="foto-wrap">
-            <div class="foto"><img src="img/presos/leoncio-rodriguez-ponce.jpg" alt="Leoncio Rodríguez Ponce" width="900" height="1200" loading="lazy"></div>
+            <div class="foto"><img src="img/presos/eliane-martin.jpg" alt="Eliane Martín" width="900" height="1200" loading="lazy"></div>
             <div class="sello">CUBA<br>LIBRE51</div>
           </div>
-          <dl><dt>NOMBRE:</dt><dd>Leoncio Rodríguez Ponce</dd><dt>ORIGEN:</dt><dd>Guantánamo</dd><dt>PRISIÓN:</dt><dd>Prisión Provincial de Las Tunas (El Típico)</dd><dt>PRESO DESDE:</dt><dd>28 de junio de 1988</dd></dl>
+          <dl><dt>NOMBRE:</dt><dd>Eliane Martín</dd><dt>EDAD:</dt><dd>16 años al ser detenida</dd><dt>ORIGEN:</dt><dd>Puerto Padre, Las Tunas</dd><dt>CONDENA:</dt><dd>Prisión provisional (atentado)</dd></dl>
           <span class="leer">Ver expediente</span>
         </a>
-        <article class="dossier">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-004</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier">
+        <a class="dossier preso-link" href="preso-miguel-enrique-giron.html" aria-label="Ver expediente de Miguel Enrique Girón Velázquez">
           <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-005</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier">
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/miguel-enrique-giron.jpg" alt="Miguel Enrique Girón Velázquez" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Miguel Enrique Girón Velázquez</dd><dt>EDAD:</dt><dd>29 años</dd><dt>ORIGEN:</dt><dd>Holguín</dd><dt>PRISIÓN:</dt><dd>La Aguada, Holguín</dd><dt>CONDENA:</dt><dd>11 años (sedición, 11J)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-walnier-aguilar-rivera.html" aria-label="Ver expediente de Walnier Luis Aguilar Rivera">
           <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-006</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CONDENA:</dt><dd>[Pendiente]</dd><dt>PRISIÓN:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/walnier-aguilar-rivera.jpg" alt="Walnier Luis Aguilar Rivera" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Walnier Luis Aguilar Rivera</dd><dt>EDAD:</dt><dd>26 años</dd><dt>ORIGEN:</dt><dd>La Güinera, La Habana</dd><dt>PRISIÓN:</dt><dd>Sancti Spíritus</dd><dt>CONDENA:</dt><dd>12 años (sedición, 11J)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-lizandra-gongora.html" aria-label="Ver expediente de Lizandra Góngora Espinosa">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-007</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/lizandra-gongora.jpg" alt="Lizandra Góngora Espinosa" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Lizandra Góngora Espinosa</dd><dt>ORIGEN:</dt><dd>Güira de Melena, Artemisa</dd><dt>PRISIÓN:</dt><dd>Los Colonos, Isla de la Juventud</dd><dt>CONDENA:</dt><dd>14 años (11J)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-jose-gabriel-barrenechea.html" aria-label="Ver expediente de José Gabriel Barrenechea Chávez">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-008</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/jose-gabriel-barrenechea.jpg" alt="José Gabriel Barrenechea Chávez" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>José Gabriel Barrenechea Chávez</dd><dt>ORIGEN:</dt><dd>Villa Clara</dd><dt>DETENCIÓN:</dt><dd>8 de noviembre de 2024</dd><dt>CONDENA:</dt><dd>6 años (desórdenes públicos)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-mayelin-rodriguez-prado.html" aria-label="Ver expediente de Mayelín Rodríguez Prado">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-009</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/mayelin-rodriguez-prado.jpg" alt="Mayelín Rodríguez Prado" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Mayelín Rodríguez Prado, “La Chamaca”</dd><dt>ORIGEN:</dt><dd>Nuevitas, Camagüey</dd><dt>PRISIÓN:</dt><dd>Granja 5, Camagüey</dd><dt>CONDENA:</dt><dd>15 años (sedición)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+              <a class="dossier preso-link" href="preso-sayli-navarro.html" aria-label="Ver expediente de Sayli Navarro Álvarez">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-010</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/sayli-navarro.jpg" alt="Sayli Navarro Álvarez" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Sayli Navarro Álvarez</dd><dt>DATO:</dt><dd>Perico, Matanzas</dd><dt>CONDENA:</dt><dd>8 años (atentado y desórdenes públicos)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-maykel-castillo-osorbo.html" aria-label="Ver expediente de Maykel Castillo Pérez, Osorbo">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-011</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/maykel-castillo-osorbo.jpg" alt="Maykel Castillo Pérez, Osorbo" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Maykel Castillo Pérez, “Osorbo”</dd><dt>DATO:</dt><dd>Rapero, Movimiento San Isidro</dd><dt>CONDENA:</dt><dd>9 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-loreto-hernandez.html" aria-label="Ver expediente de Loreto Hernández García">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-012</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/loreto-hernandez.jpg" alt="Loreto Hernández García" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Loreto Hernández García</dd><dt>DATO:</dt><dd>Presidente de la Asociación Yorubas Libres de Cuba</dd><dt>CONDENA:</dt><dd>7 años (desorden público y desacato)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-donaida-perez-paseiro.html" aria-label="Ver expediente de Donaida Pérez Paseiro">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-013</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/donaida-perez-paseiro.jpg" alt="Donaida Pérez Paseiro" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Donaida Pérez Paseiro</dd><dt>DATO:</dt><dd>Placetas, Villa Clara</dd><dt>CONDENA:</dt><dd>8 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-roberto-perez-fonseca.html" aria-label="Ver expediente de Roberto Pérez Fonseca">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-014</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/roberto-perez-fonseca.jpg" alt="Roberto Pérez Fonseca" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Roberto Pérez Fonseca</dd><dt>DATO:</dt><dd>San José de las Lajas, Mayabeque</dd><dt>CONDENA:</dt><dd>10 años (atentado, desacato, instigación, desórdenes)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-lazaro-noel-urgelles.html" aria-label="Ver expediente de Lázaro Noel Urgellés Fajardo">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-015</span></div>
+          <div class="foto-wrap">
+            <div class="foto"><img src="img/presos/lazaro-noel-urgelles.jpg" alt="Lázaro Noel Urgellés Fajardo" width="900" height="1200" loading="lazy"></div>
+            <div class="sello">CUBA<br>LIBRE51</div>
+          </div>
+          <dl><dt>NOMBRE:</dt><dd>Lázaro Noel Urgellés Fajardo</dd><dt>DATO:</dt><dd>11 de julio de 2021, siendo menor de edad</dd><dt>CONDENA:</dt><dd>5 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+              <a class="dossier preso-link" href="preso-guillermo-carralero.html" aria-label="Ver expediente de Guillermo Carralero López">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-016</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/guillermo-carralero.jpg" alt="Guillermo Carralero López" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Guillermo Carralero López</dd><dt>CONDENA:</dt><dd>8 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-javier-reyes-pena.html" aria-label="Ver expediente de Javier Reyes Peña">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-017</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/javier-reyes-pena.jpg" alt="Javier Reyes Peña" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Javier Reyes Peña</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-maikel-hill.html" aria-label="Ver expediente de Maikel Hill Ramírez">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-018</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/maikel-hill-grupo.jpg" alt="Maikel Hill Ramírez" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Maikel Hill Ramírez</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-carlos-manuel-santiesteban.html" aria-label="Ver expediente de Carlos Manuel Santiesteban Saavedra">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-019</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/carlos-manuel-santiesteban.jpg" alt="Carlos Manuel Santiesteban Saavedra" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Carlos Manuel Santiesteban Saavedra</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-enrique-gonzalez-infante.html" aria-label="Ver expediente de Enrique González Infante">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-020</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/enrique-gonzalez-infante.jpg" alt="Enrique González Infante" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Enrique González Infante</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-pedro-carlos-camacho.html" aria-label="Ver expediente de Pedro Carlos Camacho Ochoa">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-021</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/pedro-carlos-camacho.jpg" alt="Pedro Carlos Camacho Ochoa" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Pedro Carlos Camacho Ochoa</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-adisbel-mendoza.html" aria-label="Ver expediente de Adisbel Mendoza Barroso">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-022</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Adisbel Mendoza Barroso</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-carlos-mcdonald.html" aria-label="Ver expediente de Carlos Alberto McDonald Ennis">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-023</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Carlos Alberto McDonald Ennis</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-vladimir-castillo.html" aria-label="Ver expediente de Vladimir Castillo Llanes">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-024</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Vladimir Castillo Llanes</dd><dt>CONDENA:</dt><dd>9 años (desórdenes, desacato, atentado, daños)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-julian-mazola.html" aria-label="Ver expediente de Julián Mazola">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-025</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Julián Mazola</dd><dt>CONDENA:</dt><dd>12 años, rebajada a 5</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-juan-enrique-perez.html" aria-label="Ver expediente de Juan Enrique Pérez Sánchez">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-026</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Juan Enrique Pérez Sánchez</dd><dt>CONDENA:</dt><dd>8 años (desacato, desórdenes, sabotaje)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-amauris-arrate.html" aria-label="Ver expediente de Amauris Arrate Hernández">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-027</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Amauris Arrate Hernández</dd><dt>CONDENA:</dt><dd>7 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-nilo-abrahantes.html" aria-label="Ver expediente de Nilo Abrahantes Santiago">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-028</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Nilo Abrahantes Santiago</dd><dt>CONDENA:</dt><dd>5 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-luis-robles.html" aria-label="Ver expediente de Luis Robles Elizastigui">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-029</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Luis Robles Elizastigui</dd><dt>CONDENA:</dt><dd>5 años</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-sissi-abascal.html" aria-label="Ver expediente de Sissi Abascal Zamora">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-030</span></div>
+          <div class="foto-wrap"><div class="foto"><span class="pend">FOTO PENDIENTE</span></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Sissi Abascal Zamora</dd><dt>CONDENA:</dt><dd>6 años (desacato, atentado, desórdenes)</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
+        <a class="dossier preso-link" href="preso-leoncio-rodriguez-ponce.html" aria-label="Ver expediente de Leoncio Rodríguez Ponce">
+          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-031</span></div>
+          <div class="foto-wrap"><div class="foto"><img src="img/presos/leoncio-rodriguez-ponce.jpg" alt="Leoncio Rodríguez Ponce" width="800" height="660" loading="lazy"></div><div class="sello">CUBA<br>LIBRE51</div></div>
+          <dl><dt>NOMBRE:</dt><dd>Leoncio Rodríguez Ponce</dd><dt>CONDENA:</dt><dd>Preso desde 1988</dd></dl>
+          <span class="leer">Ver expediente</span>
+        </a>
       </div>
     </section>
   </main>
@@ -118,6 +307,6 @@
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
   <audio id="presos-bg" src="audio/tema-1.mp3" preload="auto" playsinline></audio>
-<script src="js/sitio.js?v=1791756720"></script>
+<script src="js/sitio.js?v=5"></script>
 </body>
 </html>

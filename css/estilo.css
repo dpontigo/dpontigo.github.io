@@ -1,6 +1,6 @@
 /* =====================================================================
-   CUBALIBRE51 — hoja de estilos común a todas las páginas
-   (las fuentes Orbitron + Rajdhani se cargan con <link> en cada página)
+   CUBALIBRE51 â€” hoja de estilos comÃºn a todas las pÃ¡ginas
+   (las fuentes Orbitron + Rajdhani se cargan con <link> en cada pÃ¡gina)
    ===================================================================== */
 :root { --red:#ff2d4b; --blue:#2f7bff; --cyan:#7fd4ff; --bg:#05060f; --panel:rgba(14,18,40,.72); --line:rgba(127,212,255,.22); --ink:#e9efff; --muted:#9aa6c8; }
 * { box-sizing:border-box; }
@@ -41,7 +41,7 @@ h1 { font-family:"Orbitron", sans-serif; font-size:36px; line-height:1.15; margi
 main { max-width:1100px; margin:0 auto; padding:24px 20px 72px; }
 section { scroll-margin-top:110px; margin-top:44px; }
 h2 { font-family:"Orbitron", sans-serif; font-size:18px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 18px; display:flex; align-items:center; gap:12px; color:#fff; }
-h2::before { content:"★"; color:var(--red); text-shadow:0 0 10px var(--red); }
+h2::before { content:"â˜…"; color:var(--red); text-shadow:0 0 10px var(--red); }
 h2::after { content:""; flex:1; height:1px; background:linear-gradient(90deg, var(--red), rgba(255,255,255,.5), var(--blue), transparent); box-shadow:0 0 8px var(--blue); }
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
 .card { background:var(--panel); border:1px solid var(--line); border-radius:4px; overflow:hidden; display:flex; flex-direction:column; transition:.25s; position:relative; }
@@ -97,7 +97,7 @@ footer .copy { max-width:1100px; margin:22px auto 0; padding-top:16px; border-to
 .hero-card::before { content:none; }
 .hero-card { max-width:620px; }
 @media (max-width:600px) { .slide h1 { font-size:32px; } .slides { min-height:280px; } }
-/* ===== Fondos fotográficos del slider (uno por diapositiva, con fundido) ===== */
+/* ===== Fondos fotogrÃ¡ficos del slider (uno por diapositiva, con fundido) ===== */
 .hero-bg { position:absolute; inset:0; overflow:hidden; background:var(--bg); }
 .hero-bg .bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transform:scale(1.08);
   transition:opacity 1.2s ease, transform 7s ease-out; filter:saturate(.85) contrast(1.05); }
@@ -115,7 +115,7 @@ footer .copy { max-width:1100px; margin:22px auto 0; padding-top:16px; border-to
   .hero-card { background:rgba(10,13,32,.62); } }
 @media (prefers-reduced-motion:reduce) { .hero-bg .bg { transition:opacity .6s; transform:none; } }
 
-/* ===== Expedientes (Presos Políticos) ===== */
+/* ===== Expedientes (Presos PolÃ­ticos) ===== */
 .nota { margin:-6px 0 18px; font-size:15px; color:var(--muted); }
 .nota b { color:var(--cyan); font-weight:600; }
 .dossiers { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
@@ -129,7 +129,7 @@ footer .copy { max-width:1100px; margin:22px auto 0; padding-top:16px; border-to
 .dossier .foto { position:relative; aspect-ratio:4/5; max-height:260px; width:100%; overflow:hidden; filter:grayscale(1);
   background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 2px, transparent 2px 4px), linear-gradient(180deg, #2a2d36, #15171d);
   border:1px solid rgba(255,255,255,.12); }
-/* silueta genérica (no es una persona real) */
+/* silueta genÃ©rica (no es una persona real) */
 .dossier .foto::before { content:""; position:absolute; left:50%; top:22%; width:30%; aspect-ratio:1; transform:translateX(-50%); border-radius:50%; background:#5b5f6b; }
 .dossier .foto::after { content:""; position:absolute; left:50%; bottom:0; width:66%; height:38%; transform:translateX(-50%); border-radius:50% 50% 0 0 / 70% 70% 0 0; background:#5b5f6b; }
 .dossier .foto img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
@@ -141,7 +141,7 @@ footer .copy { max-width:1100px; margin:22px auto 0; padding-top:16px; border-to
   color:var(--red); border:3px double var(--red); padding:6px 10px; border-radius:4px; text-align:center; line-height:1.1; opacity:.88; pointer-events:none;
   text-shadow:0 0 8px rgba(255,45,75,.7); box-shadow:0 0 14px rgba(255,45,75,.45), inset 0 0 10px rgba(255,45,75,.3); background:rgba(5,6,15,.35); }
 
-/* ===== Menú móvil (hamburguesa) ===== */
+/* ===== MenÃº mÃ³vil (hamburguesa) ===== */
 .menu-btn { display:none; width:44px; height:40px; padding:0; background:transparent; border:1px solid var(--cyan); border-radius:3px; cursor:pointer; position:relative;
   box-shadow:0 0 12px rgba(127,212,255,.4), inset 0 0 10px rgba(127,212,255,.15); }
 .menu-btn span { position:absolute; left:10px; right:10px; height:2px; background:#fff; box-shadow:0 0 6px var(--cyan), 0 0 12px var(--blue); transition:.25s; }
@@ -181,24 +181,24 @@ header.open .menu-btn span:nth-child(3) { top:19px; transform:rotate(-45deg); }
 .track { align-items:flex-start; }
 
 /* ===================================================================
-   SITIO MULTIPÁGINA
+   SITIO MULTIPÃGINA
    =================================================================== */
 
-/* ----- Navegación: página actual ----- */
+/* ----- NavegaciÃ³n: pÃ¡gina actual ----- */
 nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,75,.45), inset 0 0 10px rgba(255,45,75,.18); }
 @media (max-width:759.98px) {
   nav a.on { border-color:rgba(255,45,75,.6); border-left:2px solid var(--red); background:rgba(255,45,75,.12); }
 }
 
-/* ----- Botón "Ver todo" (portada) ----- */
+/* ----- BotÃ³n "Ver todo" (portada) ----- */
 .ver-todo { display:flex; justify-content:flex-end; margin-top:18px; }
 .btn-ver { display:inline-flex; align-items:center; gap:10px; font-family:"Orbitron",sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; padding:10px 16px;
   border:1px solid var(--cyan); color:#fff; box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 10px rgba(127,212,255,.12); transition:.2s; }
-.btn-ver::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+.btn-ver::after { content:"â†’"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
 .btn-ver:hover { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6), inset 0 0 12px rgba(127,212,255,.2); }
 .btn-ver:hover::after { transform:translateX(4px); }
 
-/* ----- Cabecera de sección (banner de cada página) ----- */
+/* ----- Cabecera de secciÃ³n (banner de cada pÃ¡gina) ----- */
 .phero .hero-inner { padding:64px 20px 70px; }
 .phero .hero-card { max-width:720px; width:fit-content; min-width:min(100%,420px); padding-right:44px; }
 .phero .kicker { font-family:"Orbitron",sans-serif; font-size:12px; letter-spacing:.3em; color:var(--cyan); margin-bottom:12px; }
@@ -236,7 +236,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
   .intro { font-size:17px; }
 }
 
-/* ----- Anexión: tarjetas de artículo ----- */
+/* ----- AnexiÃ³n: tarjetas de artÃ­culo ----- */
 .art-grid { grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr)); gap:22px; }
 .art .ph { position:relative; min-height:150px; }
 .art .ph .num { position:absolute; left:14px; bottom:10px; font-family:"Orbitron",sans-serif; font-weight:800; font-size:34px; color:transparent; -webkit-text-stroke:1px rgba(127,212,255,.7); padding:0; }
@@ -246,7 +246,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .art p { margin:6px 0 0; padding:0 14px; color:var(--muted); font-size:15px; line-height:1.45; flex:1; }
 .art .prox { display:block; margin:14px; padding:6px 10px; align-self:flex-start; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; color:var(--muted); border:1px dashed rgba(127,212,255,.35); }
 
-/* ----- Videos: cuadrícula ----- */
+/* ----- Videos: cuadrÃ­cula ----- */
 .vgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:20px; }
 .vgrid .vcard { width:auto; transition:.25s; }
 .vgrid .vcard:hover { transform:translateY(-4px); border-color:var(--cyan); box-shadow:0 0 22px rgba(127,212,255,.25); }
@@ -258,7 +258,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .vgrid .vcard strong { padding-bottom:4px; }
 .vgrid .vcard .meta { display:block; padding:0 14px 14px; color:var(--muted); font-size:15px; }
 
-/* ----- Represores: perfiles + cronología ----- */
+/* ----- Represores: perfiles + cronologÃ­a ----- */
 .perfil { border-top-color:var(--blue); }
 .perfil:nth-child(even) { border-top-color:var(--red); }
 .perfil .foto { aspect-ratio:1; max-height:220px; }
@@ -298,7 +298,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .tema audio { width:100%; }
 @media (max-width:420px) { .audio-ph .pend { display:none; } }
 
-/* ----- Barra superior en móvil: que quepa en una línea ----- */
+/* ----- Barra superior en mÃ³vil: que quepa en una lÃ­nea ----- */
 @media (max-width:480px) { .bar { font-size:10px; letter-spacing:.12em; padding:8px 6px; } }
 
 .tema audio.player { width:100%; margin-top:14px; height:42px; border-radius:6px; filter: drop-shadow(0 0 8px rgba(47,123,255,.45)); color-scheme:dark; }
@@ -337,7 +337,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .vmodal.paused .vmodal-play { display:flex; }
 .vmodal-play:hover { background:var(--red); }
 
-/* ===== Artículos: tarjeta con foto y página de artículo ===== */
+/* ===== ArtÃ­culos: tarjeta con foto y pÃ¡gina de artÃ­culo ===== */
 .card .ph img { display:block; width:100%; height:130px; object-fit:cover; object-position:center 30%; filter:grayscale(1) contrast(1.05); transition:transform .4s ease; }
 .art .ph { overflow:hidden; }
 .art .ph img { height:170px; }
@@ -346,7 +346,7 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
 .art .por { display:block; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cyan); padding:14px 14px 0; }
 .art-link strong { line-height:1.45; }
 .art .leer { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin:14px; padding:8px 12px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#fff; border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
-.art .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+.art .leer::after { content:"â†’"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
 .art-link:hover .leer, .art-link:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 .art-link:hover .leer::after { transform:translateX(4px); }
 .art-link:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
@@ -381,13 +381,13 @@ nav a.on { color:#fff; border-color:var(--red); box-shadow:0 0 12px rgba(255,45,
   .rtxt p { font-size:17px; }
 }
 
-/* ===== Portada: bloque de Canciones en 2x2 (1 columna en móvil) ===== */
+/* ===== Portada: bloque de Canciones en 2x2 (1 columna en mÃ³vil) ===== */
 .split-temas { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .split-temas .block { display:flex; flex-direction:column; }
 .split-temas .block p { flex:1; }
 @media (max-width:640px) { .split-temas { grid-template-columns:1fr; } }
 
-/* ===== Anexión: sección Anexionistas (reutiliza la ficha .dossier, sin sello) ===== */
+/* ===== AnexiÃ³n: secciÃ³n Anexionistas (reutiliza la ficha .dossier, sin sello) ===== */
 .anx-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 @media (max-width:900px) { .anx-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:560px) { .anx-grid { grid-template-columns:1fr; } }
@@ -397,12 +397,12 @@ a.dossier { display:flex; }
 .anx .prox, .anx .leer { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:14px; padding:7px 11px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; }
 .anx .prox { color:var(--muted); border:1px dashed rgba(127,212,255,.35); }
 .anx .leer { color:#fff; border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
-.anx .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+.anx .leer::after { content:"â†’"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
 a.anx:hover .leer, a.anx:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 a.anx:hover .leer::after { transform:translateX(4px); }
 a.anx:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
 
-/* ===== Presos Políticos: ficha con foto y enlace a su página ===== */
+/* ===== Presos PolÃ­ticos: ficha con foto y enlace a su pÃ¡gina ===== */
 a.dossier.preso-link { display:flex; flex-direction:column; color:inherit; text-decoration:none; }
 a.preso-link:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
 .foto-wrap { position:relative; }
@@ -410,10 +410,10 @@ a.preso-link:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; 
 .dossier .foto img { object-position:center 22%; }
 .dossier .foto:has(img)::before, .dossier .foto:has(img)::after { display:none; }
 .preso-link .leer { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:16px; padding:7px 11px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#fff; border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
-.preso-link .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+.preso-link .leer::after { content:"â†’"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
 a.preso-link:hover .leer, a.preso-link:focus-visible .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 a.preso-link:hover .leer::after { transform:translateX(4px); }
-/* página de un preso */
+/* pÃ¡gina de un preso */
 .preso-top { display:grid; grid-template-columns:300px 1fr; gap:26px; align-items:start; margin-bottom:28px; }
 .preso-top .art-foto { position:relative; margin:0; overflow:visible; }
 .preso-top .art-foto img { border-radius:4px; }
@@ -427,7 +427,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 .preso-texto ul { margin:0 0 18px; padding:0; list-style:none; display:grid; gap:10px; }
 .preso-texto li { position:relative; padding:12px 16px 12px 40px; font-size:18px; line-height:1.6; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--red); border-radius:4px; }
 .preso-texto li:nth-child(even) { border-left-color:var(--blue); }
-.preso-texto li::before { content:"★"; position:absolute; left:14px; top:12px; color:var(--cyan); text-shadow:0 0 8px rgba(127,212,255,.6); }
+.preso-texto li::before { content:"â˜…"; position:absolute; left:14px; top:12px; color:var(--cyan); text-shadow:0 0 8px rgba(127,212,255,.6); }
 .fuentes { margin:28px 0 0; padding-top:16px; border-top:1px solid var(--line); font-size:15px; color:var(--muted); }
 .fuentes h2 { margin:0 0 10px; font-size:13px; letter-spacing:.22em; }
 .fuentes ul { margin:0; padding-left:18px; display:grid; gap:6px; }
@@ -449,7 +449,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
   opacity:0; visibility:hidden; transform:none; pointer-events:none;
   transition:opacity .35s ease, visibility 0s linear .35s; }
 .hero-home .slide.on { opacity:1; visibility:visible; pointer-events:auto; transition:opacity .45s ease .4s, visibility 0s linear .4s; }
-/* texto: sale rápido, entra escalonado cuando el anterior ya se ha ido (nunca se superponen) */
+/* texto: sale rÃ¡pido, entra escalonado cuando el anterior ya se ha ido (nunca se superponen) */
 .hero-home .slide-txt > * { opacity:0; transform:translateY(14px); transition:opacity .3s ease, transform .3s ease; }
 .hero-home .slide.on .slide-txt > * { opacity:1; transform:none; transition:opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); }
 .hero-home .slide.on .slide-txt > :nth-child(1) { transition-delay:.42s; }
@@ -463,7 +463,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 .hero-home .slide p { margin:0; max-width:470px; font-size:20px; line-height:1.5; color:#dfe5f3; text-shadow:0 2px 12px rgba(0,0,0,.8); }
 .hero-home .slide a.btn { display:inline-flex; align-items:center; gap:10px; margin-top:26px; padding:13px 20px; font-size:12px; letter-spacing:.22em; color:#fff;
   background:linear-gradient(90deg, rgba(255,45,75,.92), rgba(200,25,60,.92)); border:1px solid #ff6f86; border-radius:3px; box-shadow:0 0 22px rgba(255,45,75,.5); transition:background .2s, box-shadow .2s; }
-.hero-home .slide a.btn::after { content:"→"; transition:transform .2s; }
+.hero-home .slide a.btn::after { content:"â†’"; transition:transform .2s; }
 .hero-home .slide a.btn:hover, .hero-home .slide a.btn:focus-visible { background:var(--red); box-shadow:0 0 30px rgba(255,45,75,.85); outline:none; }
 .hero-home .slide a.btn:hover::after { transform:translateX(4px); }
 /* lado visual */
@@ -519,7 +519,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
   linear-gradient(180deg, rgba(5,6,15,.35) 0%, transparent 30%, transparent 72%, rgba(5,6,15,.95) 100%),
   linear-gradient(135deg, rgba(47,123,255,.16), rgba(255,45,75,.1)); }
 .hero-home .stripes { opacity:.16; }
-/* controles: flechas + puntos con barra de progreso (el avance automático lo marca la barra) */
+/* controles: flechas + puntos con barra de progreso (el avance automÃ¡tico lo marca la barra) */
 .hero-ctrl { position:relative; z-index:3; display:flex; align-items:center; gap:14px; margin-top:22px; }
 .hero-home .dots { margin:0; gap:8px; }
 .hero-home .dots button { position:relative; width:42px; height:22px; background:none; overflow:visible; }
@@ -546,7 +546,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
   .hero-home .slide h1 { font-size:clamp(30px,9vw,40px); }
   .hero-home .slide p { font-size:17px; }
   .hero-home .slide a.btn { margin-top:20px; }
-  /* en móvil la foto relevante va de fondo */
+  /* en mÃ³vil la foto relevante va de fondo */
   .hero-home .hero-bg .bg-anexion { background-image:url(../img/articulo-1.jpg); background-position:center; }
   .hero-home .hero-bg .bg-presos { background-image:url(../img/presos/felix-navarro.jpg); background-position:center 20%; filter:grayscale(1) contrast(1.05); }
   .hero-home .hero-bg .bg-videos { filter:saturate(.9) brightness(.9); background-position:center 30%; }
@@ -561,7 +561,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 .hero-home .dots button.on { width:66px; }
 .hero-home .dots button.on::before { background:rgba(255,255,255,.55); }
 .vficha.back { opacity:.8; }
-/* represores: marco de "identificación" (esquinas + línea de escaneo) en lugar de mira */
+/* represores: marco de "identificaciÃ³n" (esquinas + lÃ­nea de escaneo) en lugar de mira */
 .vtarget { right:96px; width:150px; aspect-ratio:1; border:0; border-radius:0; box-shadow:none; opacity:.95; transform:translate(0,-86%); animation:none;
   background:
     linear-gradient(var(--red),var(--red)) left top/26px 3px no-repeat, linear-gradient(var(--red),var(--red)) left top/3px 26px no-repeat,
@@ -577,7 +577,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 .dossier .foto.color { filter:none; }
 .dossier .foto.color img { object-position:center 28%; }
 
-/* ===== Artículo 2: tarjeta sin autor, infografía y cuerpo con secciones ===== */
+/* ===== ArtÃ­culo 2: tarjeta sin autor, infografÃ­a y cuerpo con secciones ===== */
 .art .ph + strong { padding-top:16px; }
 .art-info a { display:block; cursor:zoom-in; }
 .art-info figcaption { padding:8px 12px; font-size:13px; text-align:right; background:rgba(5,6,15,.6); border-top:1px solid var(--line); }
@@ -589,7 +589,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
   background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--red); border-radius:4px; }
 .art-cuerpo h2 ~ ul:nth-of-type(even) { border-left-color:var(--blue); }
 .art-cuerpo li { position:relative; padding-left:22px; font-size:18px; line-height:1.5; color:var(--ink); }
-.art-cuerpo li::before { content:"★"; position:absolute; left:0; top:1px; font-size:13px; color:var(--cyan); text-shadow:0 0 8px rgba(127,212,255,.6); }
+.art-cuerpo li::before { content:"â˜…"; position:absolute; left:0; top:1px; font-size:13px; color:var(--cyan); text-shadow:0 0 8px rgba(127,212,255,.6); }
 @media (max-width:600px) {
   .art-cuerpo h2 { font-size:15px; letter-spacing:.14em; }
   .art-cuerpo p { font-size:17px; }
@@ -597,7 +597,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
   .art-cuerpo li { font-size:16px; }
 }
 
-/* ===== Menú: submenú de Anexión (Artículos · Anexionistas) ===== */
+/* ===== MenÃº: submenÃº de AnexiÃ³n (ArtÃ­culos Â· Anexionistas) ===== */
 .nav-sub { position:relative; display:flex; align-items:center; }
 .sub-btn { width:22px; height:32px; margin-left:-6px; padding:0; border:0; background:none; cursor:pointer; color:var(--muted); display:flex; align-items:center; justify-content:center; border-radius:3px; }
 .sub-btn::before { content:""; width:6px; height:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:translateY(-2px) rotate(45deg); transition:transform .2s; }
@@ -612,7 +612,7 @@ a.preso-link:hover .leer::after { transform:translateX(4px); }
 .nav-sub:hover .submenu, .nav-sub:focus-within .submenu, .nav-sub.open .submenu { opacity:1; visibility:visible; transform:none; transition:opacity .18s, transform .18s; }
 .nav-sub.closed .submenu { opacity:0; visibility:hidden; transform:translateY(-6px); }
 .submenu a { display:flex; align-items:center; gap:10px; padding:11px 12px; border:1px solid transparent; border-left:2px solid transparent; }
-.submenu a::before { content:"★"; font-size:9px; color:var(--red); text-shadow:0 0 6px var(--red); }
+.submenu a::before { content:"â˜…"; font-size:9px; color:var(--red); text-shadow:0 0 6px var(--red); }
 .submenu a:nth-child(even)::before { color:var(--cyan); text-shadow:0 0 6px var(--cyan); }
 .submenu a:hover, .submenu a:focus-visible { color:#fff; border-color:transparent; border-left-color:var(--cyan); background:rgba(127,212,255,.08); box-shadow:none; outline:none; }
 .submenu a.on { color:#fff; border-color:transparent; border-left-color:var(--red); background:rgba(255,45,75,.12); box-shadow:none; }
@@ -631,7 +631,7 @@ section[id] { scroll-margin-top:130px; }
   nav .submenu a.on { color:#fff; border-color:rgba(255,45,75,.6); border-left:2px solid var(--red); background:rgba(255,45,75,.12); }
 }
 
-/* ===== Anexión: bloque que enlaza a la página de Anexionistas ===== */
+/* ===== AnexiÃ³n: bloque que enlaza a la pÃ¡gina de Anexionistas ===== */
 .anx-teaser { display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center; padding:20px 24px; background:linear-gradient(180deg, rgba(20,24,46,.92), rgba(10,12,28,.92));
   border:1px solid var(--line); border-top:3px solid var(--red); border-radius:4px; transition:.25s; box-shadow:inset 0 0 26px rgba(47,123,255,.08); }
 .anx-teaser:hover { border-color:var(--cyan); box-shadow:0 0 22px rgba(127,212,255,.22); transform:translateY(-3px); }
@@ -646,12 +646,12 @@ section[id] { scroll-margin-top:130px; }
 .tz-txt p { margin:0; font-size:18px; line-height:1.5; color:var(--ink); }
 .anx-teaser .leer { display:inline-flex; align-items:center; gap:8px; margin-top:14px; padding:8px 12px; font-family:"Orbitron",sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#fff;
   border:1px solid var(--cyan); box-shadow:0 0 12px rgba(127,212,255,.35), inset 0 0 8px rgba(127,212,255,.15); transition:.2s; }
-.anx-teaser .leer::after { content:"→"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
+.anx-teaser .leer::after { content:"â†’"; color:var(--red); text-shadow:0 0 8px var(--red); transition:transform .2s; }
 .anx-teaser:hover .leer { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); }
 .anx-teaser:hover .leer::after { transform:translateX(4px); }
 @media (max-width:560px) { .anx-teaser { grid-template-columns:1fr; gap:18px; padding:18px; } .tz-txt p { font-size:17px; } }
 
-/* ===== Anexionistas: tarjeta con perfil, "Leer más" y botón activo ===== */
+/* ===== Anexionistas: tarjeta con perfil, "Leer mÃ¡s" y botÃ³n activo ===== */
 .anx div.anx-perfil p { margin:0; }
 .anx-perfil a { color:var(--cyan); border-bottom:1px solid rgba(127,212,255,.4); word-break:break-word; }
 .anx-perfil a:hover { color:#fff; border-bottom-color:#fff; }
@@ -669,11 +669,11 @@ section[id] { scroll-margin-top:130px; }
 .anx a.leer:hover, .anx a.leer:focus-visible { background:rgba(127,212,255,.12); box-shadow:0 0 18px rgba(127,212,255,.6); outline:none; }
 .anx a.leer:hover::after { transform:translateX(4px); }
 
-/* ===== Página de preso: títulos de sección y lista con etiquetas ===== */
+/* ===== PÃ¡gina de preso: tÃ­tulos de secciÃ³n y lista con etiquetas ===== */
 .preso-texto h2 { margin:34px 0 14px; font-size:17px; }
 .preso-texto ul.datos-lista li strong { color:#fff; font-weight:600; margin-right:4px; }
 @media (max-width:600px) { .preso-texto h2 { font-size:15px; letter-spacing:.14em; } }
-/* ===== Slide 01 ANEXIÓN: tarjetas apiladas (Art. 1 + Art. 2), estrella 51 como insignia fuera de la foto, fondo con tono bandera ===== */
+/* ===== Slide 01 ANEXIÃ“N: tarjetas apiladas (Art. 1 + Art. 2), estrella 51 como insignia fuera de la foto, fondo con tono bandera ===== */
 .hero-home .hero-bg .bg-anexion { background-image:linear-gradient(115deg, #1a3fb8 0%, #2f6bff 52%, #e0294d 100%), url(../img/hero-anexion.jpg); background-size:cover; background-position:center, center 62%;
   background-blend-mode:color; filter:contrast(1.2) brightness(1.05); }
 .hero-home .hero-bg .bg-anexion::after { content:""; position:absolute; inset:0; opacity:.45;
@@ -687,7 +687,7 @@ section[id] { scroll-margin-top:130px; }
   .hero-home .hero-bg .bg-anexion::after { content:none; }
   .hero-home .hero-bg:has(.bg-anexion.on)::after { background: linear-gradient(180deg, rgba(5,6,15,.15) 0%, rgba(5,6,15,.45) 40%, rgba(5,6,15,.9) 78%, rgba(5,6,15,.97) 100%); }
 }
-/* ===== Slide 02 PRESOS: abanico con los tres expedientes (EXP-003 atrás, EXP-002 en medio, EXP-001 delante) ===== */
+/* ===== Slide 02 PRESOS: abanico con los tres expedientes (EXP-003 atrÃ¡s, EXP-002 en medio, EXP-001 delante) ===== */
 .vis-presos .vficha { right:24px; width:200px; }
 .vis-presos .vficha:not(.back) { z-index:3; }
 .vis-presos .vficha.back { opacity:1; filter:brightness(.82); }
@@ -708,12 +708,12 @@ section[id] { scroll-margin-top:130px; }
   .vis-presos .vficha.back .vf-name { padding-right:60px; }
   .vis-presos .vficha .sello { font-size:10px; }
 }
-/* pie de foto con crédito (Artículo 3) */
+/* pie de foto con crÃ©dito (ArtÃ­culo 3) */
 .articulo .art-foto.art-cap figcaption { padding:9px 12px; font-size:14px; line-height:1.45; color:var(--muted); background:rgba(5,6,15,.6); border-top:1px solid var(--line); }
 .art-cap figcaption .cred { margin-left:6px; font-size:11.5px; letter-spacing:.04em; color:rgba(154,166,200,.75); text-decoration:underline; text-underline-offset:2px; white-space:nowrap; }
 .art-cap figcaption .cred:hover { color:var(--cyan); }
 
-/* ===== Slide 01 ANEXIÓN v2: tres tarjetas en cascada (cada una enlaza a su artículo, con título visible) ===== */
+/* ===== Slide 01 ANEXIÃ“N v2: tres tarjetas en cascada (cada una enlaza a su artÃ­culo, con tÃ­tulo visible) ===== */
 .vis-anexion .vframe { display:block; position:absolute; margin:0; width:min(58%,300px); border-radius:6px; overflow:hidden; color:#fff;
   border:1px solid rgba(127,212,255,.75); box-shadow:0 0 0 4px rgba(5,6,15,.7), 0 0 22px rgba(127,212,255,.3), 0 22px 46px rgba(0,0,0,.65);
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
@@ -745,5 +745,27 @@ section[id] { scroll-margin-top:130px; }
 }
 @media (prefers-reduced-motion:reduce) { .vis-anexion .vframe { transition:none; } }
 
-/* audio de fondo en Presos Políticos: invisible, sin controles */
+/* audio de fondo en Presos PolÃ­ticos: invisible, sin controles */
 #presos-bg { display:none; }
+
+/* Hero: el título no puede quedar transparente */
+.hero-home .hero-inner { position: relative; z-index: 2; }
+.hero-home .slide h1 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: none !important;
+}
+.hero-home .slide-txt,
+.hero-home .slide-txt > * { opacity: 1 !important; visibility: visible !important; }
+
+/* Quitar estrella y flecha que se ven como A roja */
+h2::before { content: none !important; }
+.btn-ver::after { content: none !important; }
+
+/* Flecha rota que se ve como At roja */
+.leer::after, .btn::after, .btn-ver::after, .volver::before, h2::before { content: none !important; }
+
+/* Flecha del menú Anexión que se ve como At */
+.sub-btn, .sub-btn::before, .sub-btn::after { content: none !important; border: 0 !important; color: transparent !important; }
+
+.submenu a::before, .submenu a::after { content: none !important; }

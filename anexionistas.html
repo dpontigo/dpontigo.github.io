@@ -10,7 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="stylesheet" href="css/estilo.css?v=6">
+<style>.leer::after,.btn::after,.btn-ver::after,a.leer::after,.card a::after{content:none !important}</style>
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +21,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html" class="on">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +32,13 @@
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero phero">
@@ -101,18 +110,28 @@
         </article>
         <article class="dossier anx">
           <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-004</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
+          <div class="foto color"><img src="img/anexionistas/anx-004.jpg" alt="Nayua Haddad" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Nayua Haddad</dd></dl>
+          <div class="anx-perfil">
+            <p class="anx-corta">Nayua Haddad explica en redes la anexión de Cuba a Estados Unidos. Si tienes dudas, mírala aquí: tiktok.com/@nayua_haddad</p>
+            <details class="anx-mas"><summary><span class="mas">Leer más</span><span class="menos">Leer menos</span></summary>
+              <p>Nayua Haddad habla en TikTok de la anexión: qué significa que Cuba pase a formar parte de Estados Unidos, y por qué lo plantea como una salida para la isla. Su cuenta es @nayua_haddad.</p>
+            </details>
+          </div>
+          <a class="leer" href="https://www.tiktok.com/@nayua_haddad" target="_blank" rel="noopener">Ver TikTok</a>
         </article>
-        <article class="dossier anx">
+        <a class="dossier anx" href="anexionista-roberto-hernandez.html">
           <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-005</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd></dl>
-          <p class="anx-perfil">Perfil pendiente. Aquí irá su historia y por qué apoya la anexión.</p>
-          <span class="prox">Próximamente</span>
-        </article>
+          <div class="foto color"><img src="img/anexionistas/roberto-hernandez.jpg" alt="Roberto Hernández Barrios" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Roberto Hernández Barrios</dd></dl>
+          <div class="anx-perfil">
+            <p class="anx-corta">Ex activista de UNPACU. Detenido en 2013 por una protesta en La Habana y liberado después de que se demostrara la farsa de la acusación.</p>
+            <details class="anx-mas"><summary><span class="mas">Leer más</span><span class="menos">Leer menos</span></summary>
+              <p>Roberto Hernández Barrios fue miembro de la Unión Patriótica de Cuba. El 30 de abril de 2013 lo detuvieron junto a Wilberto Parada después de una manifestación cerca del Capitolio. Pasó casi un año en Valle Grande. En el juicio de febrero de 2014 la defensa demostró que los cargos eran falsos.</p>
+            </details>
+          </div>
+          <span class="leer">Ver perfil</span>
+        </a>
         <article class="dossier anx">
           <div class="exp-head"><span>ANEXIONISTA</span><span class="exp-n">ANX-006</span></div>
           <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
@@ -126,6 +145,6 @@
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791756720"></script>
+<script src="js/sitio.js?v=5"></script>
 </body>
 </html>

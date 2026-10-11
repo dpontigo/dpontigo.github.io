@@ -2,7 +2,26 @@
 (function () {
   // Marquesina de videos (portada): duplica las tarjetas para que el desplazamiento sea continuo
   var t = document.getElementById('vtrack');
-  if (t) t.innerHTML += t.innerHTML;
+  if (t && !t.dataset.loop) {
+    t.dataset.loop = '1';
+    var arm = function () {
+      if (t.dataset.armed) return;
+      t.dataset.armed = '1';
+      t.innerHTML += t.innerHTML;
+      t.style.animation = 'none';
+      void t.offsetWidth;
+      t.style.animation = '';
+    };
+    var imgs = [].slice.call(t.querySelectorAll('img'));
+    var left = imgs.length;
+    if (!left) arm();
+    imgs.forEach(function (img) {
+      var done = function () { if (--left === 0) arm(); };
+      if (img.complete) done();
+      else { img.addEventListener('load', done); img.addEventListener('error', done); }
+    });
+    setTimeout(arm, 1200);
+  }
 
   // Visor de video: cualquier tarjeta con data-video="videos/...mp4" lo abre en grande y lo reproduce.
   // Delegación de eventos: las tarjetas de la marquesina están duplicadas con innerHTML.
@@ -143,12 +162,12 @@
 
   // Audio de fondo solo en Presos Políticos (#presos-bg). Sin controles; si el navegador
   // bloquea el autoplay con sonido, arranca en el primer clic/toque/tecla.
-  var bg = document.getElementById('presos-bg');
-  if (bg) {
-    bg.volume = 0.45;
-    bg.loop = false;
+  var presosBg = document.getElementById('presos-bg');
+  if (presosBg) {
+    presosBg.volume = 0.45;
+    presosBg.loop = false;
     var start = function () {
-      var p = bg.play();
+      var p = presosBg.play();
       if (p && p.catch) p.catch(function () {});
     };
     var arm = function () {
@@ -157,7 +176,7 @@
       document.removeEventListener('touchstart', arm, true);
       document.removeEventListener('keydown', arm, true);
     };
-    var tryPlay = bg.play();
+    var tryPlay = presosBg.play();
     if (tryPlay && tryPlay.catch) {
       tryPlay.catch(function () {
         document.addEventListener('click', arm, true);

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="copyright" content="© 2026 CubaLibre51">
@@ -8,9 +7,11 @@
 <meta name="description" content="CubaLibre51: Cuba, la estrella 51. Anexión, presos políticos, videos, represores y canciones.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&amp;family=Rajdhani:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="css/estilo.css?v=6">
+<style>.leer::after,.btn-ver::after,.btn::after{content:none !important}</style>
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +20,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html" class="on" aria-current="page">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +31,13 @@
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero hero-home" id="inicio">
@@ -37,7 +45,7 @@
     <div class="stripes"></div><div class="field"></div><div class="scan"></div>
     <div class="hero-inner">
       <div class="slides" role="region" aria-roledescription="carrusel" aria-label="Secciones destacadas">
-        <div class="slide on" aria-roledescription="diapositiva" aria-label="1 de 5">
+        <div class="slide on" aria-roledescription="diapositiva" aria-label="1 de 5" aria-hidden="false">
           <div class="slide-txt"><span class="kicker">01 / 05</span><h1>ANEXIÓN</h1><p>Cuba, la estrella 51. Un futuro de libertad bajo las barras y las estrellas.</p><a class="btn" href="anexion.html">VER ARTÍCULOS</a></div>
           <div class="slide-vis vis-anexion">
             <a class="vframe va-3" href="articulo-3.html" aria-label="Artículo 3: Hawái, 1898: de reino a estado 50"><img src="img/articulo-3-card.jpg" alt="" width="640" height="320"><span class="vcap"><span class="vlab">ARTÍCULO 3</span><span class="vtit">Hawái, 1898: de reino a estado 50</span></span></a>
@@ -46,7 +54,7 @@
             <div class="vstar" aria-hidden="true"><span>51</span></div>
           </div>
         </div>
-        <div class="slide" aria-roledescription="diapositiva" aria-label="2 de 5">
+        <div class="slide" aria-roledescription="diapositiva" aria-label="2 de 5" aria-hidden="true" inert="">
           <div class="slide-txt"><span class="kicker">02 / 05</span><h1>PRESOS POLÍTICOS</h1><p>Sus nombres y sus rostros. Que nadie los olvide.</p><a class="btn" href="presos-politicos.html">VER FOTOS</a></div>
           <div class="slide-vis vis-presos" aria-hidden="true">
             <div class="vficha back b2"><div class="vf-head"><span>EXPEDIENTE</span><b>EXP-003</b></div><div class="vf-ph"><img src="img/presos/maria-cristina-garrido.jpg" alt="" width="900" height="1200" loading="lazy"></div><div class="vf-name">María Cristina Garrido</div><div class="sello">CUBA<br>LIBRE51</div></div>
@@ -54,115 +62,48 @@
             <div class="vficha"><div class="vf-head"><span>EXPEDIENTE</span><b>EXP-001</b></div><div class="vf-ph"><img src="img/presos/felix-navarro.jpg" alt="" width="900" height="1200" loading="lazy"></div><div class="vf-name">Félix Navarro Rodríguez</div><div class="sello">CUBA<br>LIBRE51</div></div>
           </div>
         </div>
-        <div class="slide" aria-roledescription="diapositiva" aria-label="3 de 5">
+        <div class="slide" aria-roledescription="diapositiva" aria-label="3 de 5" aria-hidden="true" inert="">
           <div class="slide-txt"><span class="kicker">03 / 05</span><h1>VIDEOS</h1><p>Lo que está pasando, en imágenes.</p><a class="btn" href="videos.html">VER VIDEOS</a></div>
-          <div class="slide-vis vis-videos" aria-hidden="true"><div class="vphone p1"><img src="videos/video-1.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p3"><img src="videos/video-2.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p2"><img src="videos/video-4.jpg" alt="" width="720" height="1280" loading="lazy"><span class="vplay">▶&#xFE0E;</span></div></div>
+          <div class="slide-vis vis-videos" aria-hidden="true"><div class="vphone p1"><img src="videos/video-1.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p3"><img src="videos/video-2.jpg" alt="" width="720" height="1280" loading="lazy"></div><div class="vphone p2"><img src="videos/video-4.jpg" alt="" width="720" height="1280" loading="lazy"><span class="vplay">▶︎</span></div></div>
         </div>
-        <div class="slide" aria-roledescription="diapositiva" aria-label="4 de 5">
-          <div class="slide-txt"><span class="kicker">04 / 05</span><h1>REPRESORES</h1><p>Sus rostros y sus crímenes. Que no queden impunes.</p><a class="btn" href="represores.html">VER REPRESORES</a></div>
-          <div class="slide-vis vis-represores" aria-hidden="true"><div class="vficha rep back b1"><div class="vf-ph"></div></div><div class="vficha rep"><div class="vf-head"><span>PERFIL</span><b>REP-001</b></div><div class="vf-ph"></div><div class="vf-name">[Pendiente]</div></div><div class="vtarget"></div></div>
+        <div class="slide" aria-roledescription="diapositiva" aria-label="4 de 5" aria-hidden="true" inert="">
+          <div class="slide-txt"><span class="kicker">04 / 05</span><h1>REPRESORES</h1><p>REP-001 Raudel Pérez Oramas y REP-002 Yunior Cruz Perdomo. Antilla, 19 de mayo de 2026.</p><a class="btn" href="represores.html">VER REPRESORES</a></div>
+          <div class="slide-vis vis-represores" aria-hidden="true"><div class="vficha rep back b1"><div class="vf-head"><span>PERFIL</span><b>REP-002</b></div><div class="vf-ph"><img src="img/represores/rep-002.jpg" alt="" width="900" height="1200" loading="lazy"></div><div class="vf-name">Yunior Cruz Perdomo</div></div><div class="vficha rep"><div class="vf-head"><span>PERFIL</span><b>REP-001</b></div><div class="vf-ph"><img src="img/represores/rep-001.jpg" alt="" width="900" height="1200" loading="lazy"></div><div class="vf-name">Raudel Pérez Oramas</div></div><div class="vtarget"></div></div>
         </div>
-        <div class="slide" aria-roledescription="diapositiva" aria-label="5 de 5">
+        <div class="slide" aria-roledescription="diapositiva" aria-label="5 de 5" aria-hidden="true" inert="">
           <div class="slide-txt"><span class="kicker">05 / 05</span><h1>CANCIONES</h1><p>La música que no se calla.</p><a class="btn" href="canciones.html">VER CANCIONES</a></div>
           <div class="slide-vis vis-canciones" aria-hidden="true"><div class="vlist"><div class="vl-head"><span>TEMAS</span><span class="eq"><i></i><i></i><i></i><i></i><i></i></span></div><ol><li>Los Estamos Olvidando</li><li>El Carcelero de Sueños</li><li>La Miel Ajena</li><li>La Falsa Nostalgia</li></ol></div></div>
         </div>
       </div>
       <div class="hero-ctrl">
         <button class="hnav hprev" type="button" aria-label="Anterior">‹</button>
-        <div class="dots"><button class="on" type="button" aria-label="Anexión"><i></i></button><button type="button" aria-label="Presos políticos"><i></i></button><button type="button" aria-label="Videos"><i></i></button><button type="button" aria-label="Represores"><i></i></button><button type="button" aria-label="Canciones"><i></i></button></div>
+        <div class="dots"><button class="on" type="button" aria-label="Anexión" aria-current="true"><i></i></button><button type="button" aria-label="Presos políticos"><i></i></button><button type="button" aria-label="Videos"><i></i></button><button type="button" aria-label="Represores"><i></i></button><button type="button" aria-label="Canciones"><i></i></button></div>
         <button class="hnav hnext" type="button" aria-label="Siguiente">›</button>
       </div>
     </div>
   </div>
   <main>
-    <section id="articulos">
-      <h2>Anexión</h2>
-      <div class="grid">
-        <a class="card" href="articulo-1.html"><div class="ph"><img src="img/articulo-1.jpg" alt="" loading="lazy" width="745" height="466"></div><strong>Ventajas de la anexión de Cuba a los Estados Unidos de Norteamérica</strong><span>Por Héctor A. Rodríguez, PhD</span></a>
-        <a class="card" href="articulo-2.html"><div class="ph"><img src="img/articulo-2-card.jpg" alt="" loading="lazy" width="640" height="320"></div><strong>Texas, 1845: de república a estado</strong><span>La historia de Texas es una de las más singulares de América del Norte.</span></a>
-        <a class="card" href="articulo-3.html"><div class="ph"><img src="img/articulo-3-card.jpg" alt="" loading="lazy" width="640" height="320"></div><strong>Hawái, 1898: de reino a estado 50</strong><span>Hawái no se anexó como Texas.</span></a>
-      </div>
-      <div class="ver-todo"><a class="btn-ver" href="anexion.html">Ver todo</a></div>
+    <section id="intro">
+      <h2>Bienvenido</h2>
+      <p>CubaLibre51 es una página para hablar de la anexión de Cuba a Estados Unidos. No es un lema. Es una pregunta que se puede estudiar: qué es anexar, cómo lo ha hecho Estados Unidos y por qué Cuba debería formar parte de la Unión. A unas 90 millas de Florida, la isla ha sido república desde 1902 y no ha tenido un estado de derecho estable. La anexión, para quienes la defendemos, es la forma de que la ley impida que otro dictador herede el país.</p>
+      <p>También está la Cuba de ahora. Hay presos políticos por pensar distinto, por salir a la calle o por decirlo en un video. Gente que pidió electricidad, o que gritó libertad, y terminó con años de condena. La libre expresión, en la isla, se paga con cárcel y con la familia afuera. Sus expedientes están aquí para que el nombre no se pierda.</p>
+      <p>Y están los que los reprimen. No es un sistema sin cara. Hay jefes de cuartel, delegados del MININT y oficiales que salen en los videos: los que disparan para cortar una protesta, los que detienen al día siguiente, los que convierten un caldero en un expediente. En Antilla, el 19 de mayo de 2026, una marcha por el apagón acabó en disparos y en detenciones. Esos nombres van en Represores, como acusación, para que no se escondan detrás del uniforme.</p>
+      <div class="ver-todo"><a class="btn-ver" href="anexion.html">Leer sobre la anexión</a> <a class="btn-ver" href="presos-politicos.html">Ver presos políticos</a> <a class="btn-ver" href="represores.html">Ver represores</a></div>
     </section>
-    <section id="fotos">
-      <h2>Presos Políticos</h2>
-      <p class="nota"><b>Fichas pendientes:</b> se completarán con datos verificados.</p>
-      <div class="dossiers">
-        <!--
-          CÓMO AÑADIR UN EXPEDIENTE:
-          1. Copia un bloque completo <article class="dossier"> ... </article> y pégalo debajo del último.
-          2. Cambia el número (EXP-004, EXP-005...).
-          3. Sustituye cada [Pendiente] por el dato verificado (nombre, condena, prisión).
-          4. Foto: sube la imagen a img/ y cambia la línea <div class="foto">...</div> por
-             <div class="foto"><img src="img/NOMBRE-ARCHIVO.jpg" alt="Nombre de la persona"></div>
-             (se mostrará en blanco y negro automáticamente).
-        -->
-        <a class="dossier preso-link" href="preso-felix-navarro.html" aria-label="Ver expediente de Félix Navarro Rodríguez">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-001</span></div>
-          <div class="foto-wrap">
-            <div class="foto"><img src="img/presos/felix-navarro.jpg" alt="Félix Navarro Rodríguez" width="900" height="1200" loading="lazy"></div>
-            <div class="sello">CUBA<br>LIBRE51</div>
-          </div>
-          <dl><dt>NOMBRE:</dt><dd>Félix Navarro Rodríguez</dd><dt>EDAD:</dt><dd>73 años</dd><dt>ORIGEN:</dt><dd>Perico, Matanzas</dd><dt>PRISIÓN:</dt><dd>Prisión de Agüica</dd><dt>CONDENA:</dt><dd>9 años (11J)</dd></dl>
-          <span class="leer">Ver expediente</span>
-        </a>
-        <a class="dossier preso-link" href="preso-miguel-diaz-bauza.html" aria-label="Ver expediente de Miguel Díaz Bauzá">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-002</span></div>
-          <div class="foto-wrap">
-            <div class="foto"><img src="img/presos/miguel-diaz-bauza.jpg" alt="Miguel Díaz Bauzá" width="900" height="1200" loading="lazy"></div>
-            <div class="sello">CUBA<br>LIBRE51</div>
-          </div>
-          <dl><dt>NOMBRE:</dt><dd>Miguel Díaz Bauzá</dd><dt>EDAD:</dt><dd>83 años</dd><dt>ORIGEN:</dt><dd>Caibarién, Villa Clara</dd><dt>PRISIÓN:</dt><dd>Campamento La 2, Remedios</dd><dt>CONDENA:</dt><dd>36 años (acumulada)</dd></dl>
-          <span class="leer">Ver expediente</span>
-        </a>
-        <a class="dossier preso-link" href="preso-maria-cristina-garrido.html" aria-label="Ver expediente de María Cristina Garrido Rodríguez">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-003</span></div>
-          <div class="foto-wrap">
-            <div class="foto"><img src="img/presos/maria-cristina-garrido.jpg" alt="María Cristina Garrido Rodríguez" width="900" height="1200" loading="lazy"></div>
-            <div class="sello">CUBA<br>LIBRE51</div>
-          </div>
-          <dl><dt>NOMBRE:</dt><dd>María Cristina Garrido Rodríguez</dd><dt>ORIGEN:</dt><dd>Quivicán, Mayabeque</dd><dt>PRISIÓN:</dt><dd>Prisión de Mujeres de Occidente (El Guatao)</dd><dt>CONDENA:</dt><dd>7 años (11J)</dd></dl>
-          <span class="leer">Ver expediente</span>
-        </a>
-        <a class="dossier preso-link" href="preso-leoncio-rodriguez-ponce.html" aria-label="Ver expediente de Leoncio Rodríguez Ponce">
-          <div class="exp-head"><span>EXPEDIENTE</span><span class="exp-n">EXP-031</span></div>
-          <div class="foto-wrap">
-            <div class="foto"><img src="img/presos/leoncio-rodriguez-ponce.jpg" alt="Leoncio Rodríguez Ponce" width="900" height="1200" loading="lazy"></div>
-            <div class="sello">CUBA<br>LIBRE51</div>
-          </div>
-          <dl><dt>NOMBRE:</dt><dd>Leoncio Rodríguez Ponce</dd><dt>ORIGEN:</dt><dd>Guantánamo</dd><dt>PRISIÓN:</dt><dd>Prisión Provincial de Las Tunas (El Típico)</dd><dt>PRESO DESDE:</dt><dd>28 de junio de 1988</dd></dl>
-          <span class="leer">Ver expediente</span>
-        </a>
-      </div>
-      <div class="ver-todo"><a class="btn-ver" href="presos-politicos.html">Ver todo</a></div>
-    </section>
+
+    
+    
     <section id="videos">
       <h2>Videos</h2>
-      <div class="marquee"><div class="track" id="vtrack"><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶&#xFE0E;</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶&#xFE0E;</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶&#xFE0E;</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶&#xFE0E;</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard"><div class="frame">▶</div><strong>Video 5</strong></div></div></div>
+      <div class="marquee"><div class="track" id="vtrack"><div class="vcard has-video" data-video="videos/video-5.mp4" data-poster="videos/video-5.jpg" role="button" tabindex="0" aria-label="Reproducir Acto de Repudio"><div class="frame"><img src="videos/video-5.jpg" alt="" loading="eager" width="720" height="1280"><span class="play">▶︎</span></div><strong>Acto de Repudio</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard"><div class="frame">▶</div><strong>Acto de Repudio</strong></div></div></div>
       <div class="ver-todo"><a class="btn-ver" href="videos.html">Ver todo</a></div>
     </section>
-    <section id="fletes">
-      <h2>Represores</h2>
-      <div class="split">
-        <div class="block"><h3>Rostros de la represión</h3><p>Quiénes son los que golpean, encarcelan y persiguen al pueblo cubano.</p></div>
-        <div class="block"><h3>Sus crímenes</h3><p>Lo que hicieron, cuándo y contra quién. Que no queden impunes.</p></div>
-      </div>
-      <div class="ver-todo"><a class="btn-ver" href="represores.html">Ver todo</a></div>
-    </section>
-    <section id="canciones">
-      <h2>Canciones</h2>
-      <div class="split split-temas">
-        <div class="block"><h3>Los Estamos Olvidando</h3><p>Tema 1</p><audio class="player" controls preload="metadata" src="audio/tema-1.mp3"></audio></div>
-        <div class="block"><h3>El Carcelero de Sueños</h3><p>Tema 2 · Rap Protesta</p><audio class="player" controls preload="metadata" src="audio/tema-2.mp3"></audio></div>
-        <div class="block"><h3>La Miel Ajena</h3><p>Tema 3 · Canción</p><audio class="player" controls preload="metadata" src="audio/tema-3.mp3"></audio></div>
-        <div class="block"><h3>La Falsa Nostalgia</h3><p>Tema 4 · Rap</p><audio class="player" controls preload="metadata" src="audio/tema-4.mp3"></audio></div>
-      </div>
-      <div class="ver-todo"><a class="btn-ver" href="canciones.html">Ver todo</a></div>
-    </section>
+    
   </main>
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791756720"></script>
-</body>
-</html>
+<script src="js/sitio.js?v=6"></script><div class="vmodal" role="dialog" aria-modal="true" aria-label="Video" aria-hidden="true"><button class="vmodal-close" type="button" aria-label="Cerrar video">✕</button><video controls="" playsinline="" preload="none" controlslist="nodownload"></video><button class="vmodal-play" type="button" aria-label="Reproducir">▶︎</button></div>
+
+
+</body></html>

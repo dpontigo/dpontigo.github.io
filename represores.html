@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="stylesheet" href="css/estilo.css?v=5">
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +20,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +31,13 @@
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html">Videos</a>
       <a href="represores.html" class="on" aria-current="page">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero phero">
@@ -43,86 +51,129 @@
     </div>
   </div>
   <main>
-    <div class="intro-wrap"><p class="intro">Quiénes son, qué hicieron, cuándo y contra quién. Que no queden impunes.</p></div>
+    <div class="intro-wrap"><p class="intro">Estas fichas reúnen a oficiales y delegados acusados de hacer el trabajo de calle de la tiranía cubana. Su función, según las denuncias, es callar a quien quiere decir en público que el sistema es una dictadura: el que marcha por un apagón, el pastor que sale con una bandera, el vecino que graba. El uniforme sirve de escondite. El nombre no aparece en el parte, y la orden se diluye en el ministerio. Aquí se ponen delante, con cargo, zona y hecho, para que no queden solo en un video. Es acusación documentada, no sentencia. El mundo puede leer el nombre.</p></div>
     <section id="rostros" class="bloque">
       <h2>Rostros de la represión</h2>
+      <p><a class="btn-ver" href="reportar.html">Reportar un represor</a></p>
       <p class="nota"><b>Perfiles pendientes:</b> se publicarán solo con datos verificados y fuentes.</p>
       <!-- Para añadir un perfil: copia un bloque <article class="dossier perfil"> ... </article>, cambia el número (REP-007...)
            y sustituye cada [Pendiente]. Foto: <div class="foto"><img src="img/NOMBRE-ARCHIVO.jpg" alt="Nombre"></div> -->
       <div class="dossiers">
-        <article class="dossier perfil">
+        <a class="dossier perfil preso-link" href="rep-raudel-perez-oramas.html" aria-label="Ver perfil de Raudel Pérez Oramas">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-001</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier perfil">
+          <div class="foto"><img src="img/represores/rep-001.jpg" alt="Raudel Pérez Oramas" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Raudel Pérez Oramas</dd><dt>CARGO:</dt><dd>Jefe del cuartel municipal de la PNR</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Antilla, Holguín</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-yunior-cruz-perdomo.html" aria-label="Ver perfil de Yunior Cruz Perdomo">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-002</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier perfil">
+          <div class="foto"><img src="img/represores/rep-002.jpg" alt="Yunior Cruz Perdomo" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Yunior Cruz Perdomo</dd><dt>CARGO:</dt><dd>Teniente coronel, delegado del MININT</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Antilla, Holguín</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-lester-arostica-cermeno.html" aria-label="Ver perfil de Lester Aróstica Cermeño">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-003</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier perfil">
+          <div class="foto"><img src="img/represores/rep-003.jpg" alt="Lester Aróstica Cermeño" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Lester Aróstica Cermeño</dd><dt>CARGO:</dt><dd>Delegado del MININT en Cabaiguán</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Cabaiguán, Sancti Spíritus</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+              <a class="dossier perfil preso-link" href="rep-julio-sotomayor.html" aria-label="Ver perfil de Julio César Sotomayor Lora">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-004</span></div>
-          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier perfil">
+          <div class="foto"><img src="img/represores/julio-sotomayor.jpg" alt="Julio César Sotomayor Lora" width="800" height="660" loading="lazy"></div>
+          <dl><dt>NOMBRE:</dt><dd>Julio César Sotomayor Lora</dd><dt>CARGO:</dt><dd>Teniente, Unidad Provincial de Tránsito</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Palma Soriano, Santiago de Cuba</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-felipe-aparicio.html" aria-label="Ver perfil de Felipe Aparicio Santiesteban">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-005</span></div>
           <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
-        <article class="dossier perfil">
+          <dl><dt>NOMBRE:</dt><dd>Felipe Aparicio Santiesteban</dd><dt>CARGO:</dt><dd>Primer suboficial, Unidad Provincial de Tránsito</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Palma Soriano, Santiago de Cuba</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-miguel-rodriguez-arriera.html" aria-label="Ver perfil de Miguel Ángel Rodríguez Arriera">
           <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-006</span></div>
           <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
-          <dl><dt>NOMBRE:</dt><dd>[Pendiente]</dd><dt>CARGO:</dt><dd>[Pendiente]</dd><dt>INSTITUCIÓN:</dt><dd>[Pendiente]</dd><dt>ZONA:</dt><dd>[Pendiente]</dd></dl>
-          <div class="sello">CUBA<br>LIBRE51</div>
-        </article>
+          <dl><dt>NOMBRE:</dt><dd>Miguel Ángel Rodríguez Arriera</dd><dt>CARGO:</dt><dd>Miguelito Corcho</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Bejucal, Mayabeque</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-gualberto-perdomo.html" aria-label="Ver perfil de Gualberto Perdomo">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-007</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Gualberto Perdomo</dd><dt>CARGO:</dt><dd>Bejucal, Mayabeque</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Bejucal, Mayabeque</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-carlos-martinez-rodriguez.html" aria-label="Ver perfil de Carlos Martínez Rodríguez">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-008</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Carlos Martínez Rodríguez</dd><dt>CARGO:</dt><dd>Teniente coronel, jefe provincial de establecimientos penitenciarios</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Ciego de Ávila</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-yariel-dominico.html" aria-label="Ver perfil de Yariel Dominico Méndez">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-009</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Yariel Dominico Méndez</dd><dt>CARGO:</dt><dd>Miembro de las Tropas Especiales, Boinas Negras</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Prisión de Canaleta, Ciego de Ávila</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-roiner-herrera.html" aria-label="Ver perfil de Roiner Herrera Piña">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-010</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Roiner Herrera Piña</dd><dt>CARGO:</dt><dd>Capitán, Departamento de Instrucción Penal</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Holguín</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-teniente-parra.html" aria-label="Ver perfil de Teniente Coronel Parra">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-011</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Teniente Coronel Parra</dd><dt>CARGO:</dt><dd>Jefe de la Seguridad del Estado en Holguín, según la Fundación</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Holguín</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-yamissel-hernandez.html" aria-label="Ver perfil de Yamisel Hernández Rodríguez">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-012</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Yamisel Hernández Rodríguez</dd><dt>CARGO:</dt><dd>Fiscal jefa de grupo, Procesos Penales</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Holguín</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-piray-gil.html" aria-label="Ver perfil de Piray Yamilet Gil Bello">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-013</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Piray Yamilet Gil Bello</dd><dt>CARGO:</dt><dd>Fiscal actuante</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Guanabacoa, La Habana</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-mariannis-hernandez.html" aria-label="Ver perfil de Mariannis Hernández Sánchez">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-014</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Mariannis Hernández Sánchez</dd><dt>CARGO:</dt><dd>Jefa de Sector</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Guanabacoa, La Habana</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-yordanis-diaz.html" aria-label="Ver perfil de Yordanis Díaz García">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-015</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Yordanis Díaz García</dd><dt>CARGO:</dt><dd>Oficial de la PNR</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Guanabacoa, La Habana</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-melody-gonzalez.html" aria-label="Ver perfil de Melody González Pedraza">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-016</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Melody González Pedraza</dd><dt>CARGO:</dt><dd>Jueza municipal</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Camagüey</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-rosabel-roca.html" aria-label="Ver perfil de Rosabel Roca Sampedro">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-017</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>Rosabel Roca Sampedro</dd><dt>CARGO:</dt><dd>Fiscal</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Camagüey</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
+        <a class="dossier perfil preso-link" href="rep-william-pena.html" aria-label="Ver perfil de William Peña Peña">
+          <div class="exp-head"><span>PERFIL</span><span class="exp-n">REP-018</span></div>
+          <div class="foto"><span class="pend">FOTO PENDIENTE</span></div>
+          <dl><dt>NOMBRE:</dt><dd>William Peña Peña</dd><dt>CARGO:</dt><dd>Director del IPU Antonio Maceo Grajales</dd><dt>INSTITUCIÓN:</dt><dd>MININT</dd><dt>ZONA:</dt><dd>Campechuela, Granma</dd></dl>
+          <span class="leer">Ver perfil</span>
+        </a>
       </div>
     </section>
-    <section id="crimenes" class="bloque">
-      <h2>Sus crímenes</h2>
-      <p class="nota"><b>Cronología pendiente:</b> cada hecho se documentará con fecha, responsables y fuente.</p>
-      <!-- Para añadir un hecho: copia un bloque <li> ... </li> dentro de la lista y sustituye cada [Pendiente]. -->
-      <ol class="timeline">
-        <li>
-          <div class="when">FECHA: [PENDIENTE]</div>
-          <h3>Hecho 01 · [Pendiente]</h3>
-          <p>Descripción pendiente. Qué ocurrió, dónde y contra quién, con datos verificados.</p>
-          <dl><dt>RESPONSABLES:</dt><dd>[Pendiente]</dd><dt>VÍCTIMAS:</dt><dd>[Pendiente]</dd><dt>FUENTE:</dt><dd>[Pendiente]</dd></dl>
-        </li>
-        <li>
-          <div class="when">FECHA: [PENDIENTE]</div>
-          <h3>Hecho 02 · [Pendiente]</h3>
-          <p>Descripción pendiente. Qué ocurrió, dónde y contra quién, con datos verificados.</p>
-          <dl><dt>RESPONSABLES:</dt><dd>[Pendiente]</dd><dt>VÍCTIMAS:</dt><dd>[Pendiente]</dd><dt>FUENTE:</dt><dd>[Pendiente]</dd></dl>
-        </li>
-        <li>
-          <div class="when">FECHA: [PENDIENTE]</div>
-          <h3>Hecho 03 · [Pendiente]</h3>
-          <p>Descripción pendiente. Qué ocurrió, dónde y contra quién, con datos verificados.</p>
-          <dl><dt>RESPONSABLES:</dt><dd>[Pendiente]</dd><dt>VÍCTIMAS:</dt><dd>[Pendiente]</dd><dt>FUENTE:</dt><dd>[Pendiente]</dd></dl>
-        </li>
-        <li>
-          <div class="when">FECHA: [PENDIENTE]</div>
-          <h3>Hecho 04 · [Pendiente]</h3>
-          <p>Descripción pendiente. Qué ocurrió, dónde y contra quién, con datos verificados.</p>
-          <dl><dt>RESPONSABLES:</dt><dd>[Pendiente]</dd><dt>VÍCTIMAS:</dt><dd>[Pendiente]</dd><dt>FUENTE:</dt><dd>[Pendiente]</dd></dl>
-        </li>
-      </ol>
-    </section>
+    
   </main>
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791756720"></script>
+<script src="js/sitio.js?v=5"></script>
 </body>
 </html>

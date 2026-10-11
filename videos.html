@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/estilo.css?v=1791756720">
+<link rel="stylesheet" href="css/estilo.css?v=5">
+<style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
@@ -19,6 +20,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
       <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
       <div class="nav-sub">
         <a href="anexion.html">Anexión</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-anexion" aria-label="Submenú de Anexión"></button>
         <div class="submenu" id="sub-anexion">
@@ -29,7 +31,13 @@
       <a href="presos-politicos.html">Presos Políticos</a>
       <a href="videos.html" class="on" aria-current="page">Videos</a>
       <a href="represores.html">Represores</a>
-      <a href="canciones.html">Canciones</a>
+      <div class="nav-sub">
+        <a href="canciones.html">Canciones</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-canciones" aria-label="Submenú de Canciones"></button>
+        <div class="submenu" id="sub-canciones">
+          <a href="canciones.html">Escuchar</a>
+          <a href="musica.html">Tienda</a>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="hero phero">
@@ -43,7 +51,7 @@
     </div>
   </div>
   <main>
-    <div class="intro-wrap"><p class="intro">Lo que está pasando, en imágenes. Los videos se irán publicando aquí.</p></div>
+    <div class="intro-wrap"><p class="intro">La galería reúne imágenes de lo que ocurre en Cuba cuando alguien disiente. Hay actos de repudio contra personas acusadas de decir que el país vive bajo una dictadura. En esas escenas se ve a vecinos y partidarios frente a una casa o una reja, gritando, mientras el señalado queda del otro lado. Para el cubano anexionista, el material sirve de registro: no es un discurso, es el costo diario de hablar. La libre expresión, en la isla, se responde con acoso, detención o cárcel.</p></div>
     <section id="videos">
       <h2>Galería</h2>
       <!--
@@ -86,12 +94,17 @@
           <div class="frame"><span class="pend">VIDEO PENDIENTE</span><span class="play">▶&#xFE0E;</span><span class="dur">--:--</span></div>
           <strong>Video 6</strong><span class="meta">Título y fecha: [Pendiente]</span>
         </div>
+
+        <div class="vcard has-video" data-video="videos/video-5.mp4" data-poster="videos/video-5.jpg" role="button" tabindex="0" aria-label="Reproducir Acto de Repudio">
+          <div class="frame"><img src="videos/video-5.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶&#xFE0E;</span><span class="dur">1:12</span></div>
+          <strong>Acto de Repudio</strong><span class="meta">Acto de repudio</span>
+        </div>
       </div>
     </section>
   </main>
   <footer><div class="inner"><span>CUBALIBRE51</span><span class="stars">★★★★★</span>
     </div>
     <p class="copy">© 2026 CubaLibre51 · cubalibre51.com. Todos los derechos reservados.</p></footer>
-<script src="js/sitio.js?v=1791756720"></script>
+<script src="js/sitio.js?v=5"></script>
 </body>
 </html>
