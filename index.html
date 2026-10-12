@@ -8,17 +8,13 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&amp;family=Oswald:wght@700&amp;family=Rajdhani:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&amp;family=Rajdhani:wght@400;600&amp;display=swap">
 <link rel="stylesheet" href="css/estilo.css?v=6">
 <style>.leer::after,.btn-ver::after,.btn::after{content:none !important}</style>
 <style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 <style>
-#intro{position:relative}
-#intro>*{position:relative;z-index:1}
-#intro .intro-flag{position:absolute;z-index:0;top:-150px;right:-60px;width:min(62%,720px);aspect-ratio:960/662;background:url(img/bandera-cuba-ondeando.jpg) center/cover no-repeat;-webkit-mask-image:radial-gradient(ellipse 75% 70% at 65% 40%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 75% 70% at 65% 40%,#000 55%,transparent 100%);opacity:.8;pointer-events:none}
-#intro p:not(.intro-lema){text-shadow:0 1px 3px rgba(0,0,0,.9)}
-#intro .intro-lema{position:absolute;z-index:2;top:-70px;right:0;margin:0;font-family:"Oswald",Impact,sans-serif;font-weight:700;font-style:italic;font-size:clamp(34px,5.4vw,64px);line-height:1;color:#ffc21a;transform:rotate(-4deg) skewX(-6deg);text-shadow:2px 2px 0 #7a4b00,4px 5px 0 #000,0 8px 22px rgba(0,0,0,.8);white-space:nowrap;pointer-events:none}
-@media (max-width:700px){#intro .intro-flag{top:-90px;right:-20px;width:85%;opacity:.55}#intro .intro-lema{top:-48px;font-size:34px}}
+.lema-banner{margin:34px 0 0;border:1px solid rgba(127,212,255,.35);border-radius:6px;overflow:hidden;box-shadow:0 0 22px rgba(47,123,255,.35),0 0 60px rgba(214,40,57,.18);line-height:0}
+.lema-banner img{display:block;width:100%;height:auto;aspect-ratio:1280/562;object-fit:cover}
 </style>
 </head>
 <body>
@@ -92,8 +88,6 @@
   </div>
   <main>
     <section id="intro">
-      <div class="intro-flag" aria-hidden="true"></div>
-      <p class="intro-lema">Cuba pa la calle</p>
       <h2>Bienvenido</h2>
       <p>CubaLibre51 es una página para hablar de la anexión de Cuba a Estados Unidos. No es un lema. Es una pregunta que se puede estudiar: qué es anexar, cómo lo ha hecho Estados Unidos y por qué Cuba debería formar parte de la Unión. A unas 90 millas de Florida, la isla ha sido república desde 1902 y no ha tenido un estado de derecho estable. La anexión, para quienes la defendemos, es la forma de que la ley impida que otro dictador herede el país.</p>
       <p>También está la Cuba de ahora. Hay presos políticos por pensar distinto, por salir a la calle o por decirlo en un video. Gente que pidió electricidad, o que gritó libertad, y terminó con años de condena. La libre expresión, en la isla, se paga con cárcel y con la familia afuera. Sus expedientes están aquí para que el nombre no se pierda.</p>
@@ -103,6 +97,8 @@
 
     
     
+    <figure class="lema-banner"><img src="img/cuba-pa-la-calle.jpg" alt="Bandera de Cuba con el lema Cuba pa la calle" width="1280" height="562" loading="lazy"></figure>
+
     <section id="videos">
       <h2>Videos</h2>
       <div class="marquee"><div class="track" id="vtrack"><div class="vcard has-video" data-video="videos/video-5.mp4" data-poster="videos/video-5.jpg" role="button" tabindex="0" aria-label="Reproducir Acto de Repudio"><div class="frame"><img src="videos/video-5.jpg" alt="" loading="eager" width="720" height="1280"><span class="play">▶︎</span></div><strong>Acto de Repudio</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard"><div class="frame">▶</div><strong>Acto de Repudio</strong></div></div></div>
