@@ -13,13 +13,15 @@
 <style>.leer::after,.btn-ver::after,.btn::after{content:none !important}</style>
 <style>.submenu a::before,.submenu a::after,.leer::after,.btn::after,.btn-ver::after,.sub-btn::before,.sub-btn::after{content:none !important}</style>
 <style>
-.lema-banner{margin:34px 0 0;border:1px solid rgba(127,212,255,.35);border-radius:6px;overflow:hidden;box-shadow:0 0 22px rgba(47,123,255,.35),0 0 60px rgba(214,40,57,.18);line-height:0}
-.lema-banner img{display:block;width:100%;height:auto;aspect-ratio:1280/562;object-fit:cover}
+header .esquina-flag{position:absolute;top:0;right:0;bottom:2px;width:min(40vw,440px);background:url(img/bandera-esquina.jpg) right center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%);pointer-events:none;z-index:0}
+header .top{position:relative;z-index:1}
+@media (max-width:760px){header .esquina-flag{bottom:auto;height:68px;width:52vw;right:58px;opacity:.8}}
 </style>
 </head>
 <body>
   <div class="bar"><span>★ Estados Unidos · Cuba · Estrella 51 ★</span></div>
   <header>
+  <div class="esquina-flag" aria-hidden="true"></div>
     <div class="top"><a class="logo" href="index.html"><img src="logo.svg" alt="" width="42" height="49">CUBALIBRE51 <span class="stars">★★★</span></a>
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
     <nav id="menu" aria-label="Secciones">
@@ -97,8 +99,6 @@
 
     
     
-    <figure class="lema-banner"><img src="img/cuba-pa-la-calle.jpg" alt="Bandera de Cuba con el lema Cuba pa la calle" width="1280" height="562" loading="lazy"></figure>
-
     <section id="videos">
       <h2>Videos</h2>
       <div class="marquee"><div class="track" id="vtrack"><div class="vcard has-video" data-video="videos/video-5.mp4" data-poster="videos/video-5.jpg" role="button" tabindex="0" aria-label="Reproducir Acto de Repudio"><div class="frame"><img src="videos/video-5.jpg" alt="" loading="eager" width="720" height="1280"><span class="play">▶︎</span></div><strong>Acto de Repudio</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard has-video" data-video="videos/video-1.mp4" data-poster="videos/video-1.jpg" role="button" tabindex="0" aria-label="Reproducir La Falsa Moral"><div class="frame"><img src="videos/video-1.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>La Falsa Moral</strong></div><div class="vcard has-video" data-video="videos/video-2.mp4" data-poster="videos/video-2.jpg" role="button" tabindex="0" aria-label="Reproducir Despierta Cuba"><div class="frame"><img src="videos/video-2.jpg" alt="" loading="lazy" width="720" height="1280" style="object-position:center 15%"><span class="play">▶︎</span></div><strong>Despierta Cuba</strong></div><div class="vcard has-video" data-video="videos/video-3.mp4" data-poster="videos/video-3.jpg" role="button" tabindex="0" aria-label="Reproducir Si Cuba no es Anexada"><div class="frame"><img src="videos/video-3.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Si Cuba no es Anexada</strong></div><div class="vcard has-video" data-video="videos/video-4.mp4" data-poster="videos/video-4.jpg" role="button" tabindex="0" aria-label="Reproducir Libertad para Anna Bensi"><div class="frame"><img src="videos/video-4.jpg" alt="" loading="lazy" width="720" height="1280"><span class="play">▶︎</span></div><strong>Libertad para Anna Bensi</strong></div><div class="vcard"><div class="frame">▶</div><strong>Acto de Repudio</strong></div></div></div>
